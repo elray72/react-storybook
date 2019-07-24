@@ -1,0 +1,44 @@
+/** ====================================================================================================================
+// Layout
+// ================================================================================================================== */
+
+@import "../common";
+
+html {
+	cursor: initial;
+}
+
+body {
+	overflow-x: hidden;
+	margin: 0;
+	font-family: $font-text, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	height: em($header-height-m);
+}
+
+.sidebar {
+	width: em($header-height-m);
+}
+
+.main {
+	position: relative;
+	z-index: 1;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+.section {
+	height: 100vh;
+}
