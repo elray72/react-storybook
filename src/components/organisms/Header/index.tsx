@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './_header.scss';
 
-import Hamburger from '../../atoms/Hamburger';
+import Hamburger, { HamburgerTypes } from '../../atoms/Hamburger';
 import Nav from '../../organisms/Nav';
 
 interface IProps {
@@ -41,7 +41,7 @@ const Header: React.FC<IProps> = (props) => {
 				</div>
 				<div className="header__overlay" onClick={handleOverlayClick} />
 			</header>
-			<Hamburger expanded={expanded} onClick={handleHamburgerClick} />
+			<Hamburger type={HamburgerTypes.Default} expanded={expanded} onClick={handleHamburgerClick} />
 		</React.Fragment>
 	);
 };

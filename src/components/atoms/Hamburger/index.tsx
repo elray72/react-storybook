@@ -8,6 +8,14 @@ interface IProps {
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+export const HamburgerTypes = {
+	Default: '',
+	ArrowUp: 'arrow-up',
+	ArrowDown: 'arrow-down',
+	ArrowLeft: 'arrow-left',
+	ArrowRight: 'arrow-right',
+};
+
 const Hamburger: React.FC<IProps> = (props) => {
 	const [init, setInit] = React.useState(true);
 	const [expanded, setExpanded] = React.useState(props.expanded);

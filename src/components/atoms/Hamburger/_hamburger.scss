@@ -1,6 +1,8 @@
 @import '../../../themes/v1/scss/common';
 
 $hamburger-size: 60px;
+$hamburger-timing: 0.25s;
+$hamburger-color: $black;
 
 .hamburger {
 	display: block;
@@ -10,11 +12,7 @@ $hamburger-size: 60px;
 	padding: 0;
 	border: 0;
 	cursor: pointer;
-	transition: transform 0.25s ease-in-out;
 	background: transparent;
-	position: fixed;
-	top: 0;
-	right: 0;
 	z-index: 3;
 
 	&:focus {
@@ -27,12 +25,12 @@ $hamburger-size: 60px;
 
 	&__bar {
 		width: em(30);
-		height: em(4);
-		background-color: $black;
+		height: em($hamburger-size / 15);
+		background-color: $hamburger-color;
 		border-radius: em(2);
 		display: block;
 		margin: em(4) auto;
-		transition: all 0.25s ease-in-out;
+		transition: all $hamburger-timing ease-in-out;
 	}
 
 	&--init {
@@ -44,7 +42,7 @@ $hamburger-size: 60px;
 	&--close {
 		.hamburger__bar {
 			&:nth-child(1) {
-				animation: close-top-o 0.5s;
+				animation: close-top-o $hamburger-timing;
 				animation-fill-mode: forwards;
 				animation-iteration-count: 1;
 			}
@@ -54,7 +52,7 @@ $hamburger-size: 60px;
 			}
 
 			&:nth-child(3) {
-				animation: close-bottom-o 0.5s;
+				animation: close-bottom-o $hamburger-timing;
 				animation-fill-mode: forwards;
 			}
 		}
@@ -64,7 +62,7 @@ $hamburger-size: 60px;
 				visibility: visible;
 
 				&:nth-child(1) {
-					animation: close-top-x 0.5s;
+					animation: close-top-x $hamburger-timing;
 					animation-fill-mode: forwards;
 				}
 
@@ -73,7 +71,7 @@ $hamburger-size: 60px;
 				}
 
 				&:nth-child(3) {
-					animation: close-bottom-x 0.5s;
+					animation: close-bottom-x $hamburger-timing;
 					animation-fill-mode: forwards;
 				}
 			}
