@@ -29,3 +29,4 @@ yarn-error.log*
 /dist
 /build
 /public/web.config
+/storybook-static
