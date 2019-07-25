@@ -1,16 +1,20 @@
 import * as React from 'react';
 import classNames from 'classnames';
-//import './_header.scss';
+import './_header.scss';
 
 interface IProps {
-
+	children?: React.ReactNode,
+	className?: string,
 }
 
 const Header: React.FC<IProps> = (props) => {
+	const componentClass = classNames('header', props.className);
 
 	return (
-		<div>
-			<h1>This is a header</h1>
+		<div className={componentClass}>
+			<div className="header__inner">
+				{props.children}
+			</div>
 		</div>
 	);
 };

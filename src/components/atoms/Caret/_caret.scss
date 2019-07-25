@@ -1,14 +1,14 @@
 @import '../../../themes/v1/scss/common';
 
-$hamburger-size: 60px;
-$hamburger-timing: 0.25s;
-$hamburger-color: $black;
+$nav-button-size: 60px;
+$nav-button-timing: 0.25s;
+$nav-button-color: $black;
 
-.hamburger {
+.nav-button {
 	display: block;
-	height: em($hamburger-size);
-	width: em($hamburger-size);
-	margin: em(($header-height-m - $hamburger-size)/2);
+	height: em($nav-button-size);
+	width: em($nav-button-size);
+	margin: em(($header-height-m - $nav-button-size)/2);
 	padding: 0;
 	border: 0;
 	cursor: pointer;
@@ -25,24 +25,24 @@ $hamburger-color: $black;
 
 	&__bar {
 		width: em(30);
-		height: em($hamburger-size / 15);
-		background-color: $hamburger-color;
+		height: em($nav-button-size / 15);
+		background-color: $nav-button-color;
 		border-radius: em(2);
 		display: block;
 		margin: em(4) auto;
-		transition: all $hamburger-timing ease-in-out;
+		transition: all $nav-button-timing ease-in-out;
 	}
 
 	&--init {
-		.hamburger__bar {
+		.nav-button__bar {
 			animation: none !important;
 		}
 	}
 
 	&--close {
-		.hamburger__bar {
+		.nav-button__bar {
 			&:nth-child(1) {
-				animation: close-top-o $hamburger-timing;
+				animation: close-top-o $nav-button-timing;
 				animation-fill-mode: forwards;
 				animation-iteration-count: 1;
 			}
@@ -52,17 +52,17 @@ $hamburger-color: $black;
 			}
 
 			&:nth-child(3) {
-				animation: close-bottom-o $hamburger-timing;
+				animation: close-bottom-o $nav-button-timing;
 				animation-fill-mode: forwards;
 			}
 		}
 
-		&.hamburger--expanded {
-			.hamburger__bar {
+		&.nav-button--expanded {
+			.nav-button__bar {
 				visibility: visible;
 
 				&:nth-child(1) {
-					animation: close-top-x $hamburger-timing;
+					animation: close-top-x $nav-button-timing;
 					animation-fill-mode: forwards;
 				}
 
@@ -71,7 +71,7 @@ $hamburger-color: $black;
 				}
 
 				&:nth-child(3) {
-					animation: close-bottom-x $hamburger-timing;
+					animation: close-bottom-x $nav-button-timing;
 					animation-fill-mode: forwards;
 				}
 			}
@@ -79,8 +79,8 @@ $hamburger-color: $black;
 	}
 
 	&--arrow {
-		&.hamburger--expanded {
-			.hamburger__bar {
+		&.nav-button--expanded {
+			.nav-button__bar {
 				&:nth-child(1) {
 					transform: translateY(em(4)) translateX(em(4)) rotate(45deg) scaleX(0.5);
 				}
@@ -96,15 +96,15 @@ $hamburger-color: $black;
 		}
 
 		&-up {
-			@extend .hamburger--arrow;
-			&.hamburger--expanded {
+			@extend .nav-button--arrow;
+			&.nav-button--expanded {
 				transform: rotate(0);
 			}
 		}
 
 		&-down {
-			&.hamburger--expanded {
-				.hamburger__bar {
+			&.nav-button--expanded {
+				.nav-button__bar {
 					&:nth-child(1) {
 						transform: translateY(em(13)) translateX(em(4)) rotate(-45deg) scaleX(0.5);
 					}
@@ -121,15 +121,15 @@ $hamburger-color: $black;
 		}
 
 		&-left {
-			@extend .hamburger--arrow;
-			&.hamburger--expanded {
+			@extend .nav-button--arrow;
+			&.nav-button--expanded {
 				transform: rotate(-90deg);
 			}
 		}
 
 		&-right {
-			@extend .hamburger--arrow-down;
-			&.hamburger--expanded {
+			@extend .nav-button--arrow-down;
+			&.nav-button--expanded {
 				transform: rotate(-90deg);
 			}
 		}

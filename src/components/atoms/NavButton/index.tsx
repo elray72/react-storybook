@@ -1,22 +1,24 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import './_hamburger.scss';
+import styled from 'styled-components';
+import './_nav-button.scss';
 
 interface IProps {
+	className?: string,
 	expanded?: boolean;
 	type?: string;
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const HamburgerTypes = {
-	Default: '',
+export const NavButtonType = {
+	Default: 'close',
 	ArrowUp: 'arrow-up',
 	ArrowDown: 'arrow-down',
 	ArrowLeft: 'arrow-left',
 	ArrowRight: 'arrow-right',
 };
 
-const Hamburger: React.FC<IProps> = (props) => {
+const NavButton: React.FC<IProps> = (props) => {
 	const [init, setInit] = React.useState(true);
 	const [expanded, setExpanded] = React.useState(props.expanded);
 
@@ -30,19 +32,20 @@ const Hamburger: React.FC<IProps> = (props) => {
 		else setExpanded((expanded) => !expanded);
 	};
 
-	const expandType = props.type ? `hamburger--${props.type}` : 'hamburger--close';
-	const componentClass = classNames('hamburger', expandType, {
-		'hamburger--init': init, // init state has styles preventing the initial reverse animation
-		'hamburger--expanded': expanded,
+	const componentType = props.type ? `nav-button--${props.type}` : 'nav-button--close';
+	const componentClass = classNames(props.className, 'nav-button', componentType, {
+		'nav-button--init': init, // init state has styles preventing the initial reverse animation
+		'nav-button--expanded': expanded,
 	});
 
 	return (
 		<button type="button" className={componentClass} onClick={handleOnClick}>
-			<span className="hamburger__bar" />
-			<span className="hamburger__bar" />
-			<span className="hamburger__bar" />
+			<span className="nav-button__bar" />
+			<span className="nav-button__bar" />
+			<span className="nav-button__bar" />
 		</button>
 	);
 };
 
-export default Hamburger;
+
+export default NavButton;

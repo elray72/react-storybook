@@ -11,5 +11,9 @@
 
 	&__link {
 		color: deepskyblue;
+
+		&--placeholder {
+			cursor: pointer;
+		}
 	}
 }
