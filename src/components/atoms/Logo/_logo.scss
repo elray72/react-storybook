@@ -1,0 +1,25 @@
+@import "../../../themes/v1/scss/common";
+
+.image {
+	display: flex;
+	height: 100%;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	padding: em(16);
+	margin: 0;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&--ah {
+
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+}

@@ -11,6 +11,7 @@ import Home from '../pages/Home';
 import ToDo from '../pages/ToDo';
 import Test from '../pages/Test';
 import NotFound from '../pages/NotFound';
+import NavButton from './atoms/NavButton';
 
 const App: React.FC = () => {
 	return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
 						About
 					</Link>
 				</Nav>
+				<NavButton />
 			</Header>
 			<main className="main">
 				<Switch>

@@ -5,16 +5,13 @@ import Header from './index';
 import Nav from '../../organisms/Nav';
 import NavButton from '../../atoms/NavButton';
 
-const Link = styled.a`
-	cursor: pointer;
-`;
-
 const HeaderNav = styled(() => (
 	<Nav>
-		<Link className="nav__link">Home</Link>
-		<Link className="nav__link">About</Link>
+		<button className="nav__link">Home</button>
+		<button className="nav__link">About</button>
 	</Nav>
 ))`
+	margin-left: em(8);
 	margin-right: auto;
 `;
 
@@ -28,7 +25,7 @@ const HeaderNavButton = styled(NavButton)`
 storiesOf('Components|Organisms/Header', module)
 	.add('Default', () => (
 		<Header className="header--full-width">
-			<HeaderNavButton />
 			<HeaderNav />
+			<HeaderNavButton />
 		</Header>
 	));
