@@ -1,3 +1,5 @@
+@import '../../../themes/v1/scss/common';
+
 .nav {
 
 	&__list {
@@ -14,6 +16,7 @@
 	}
 
 	&__link {
+		color: $white;
 		border: none;
 		background: transparent;
 		display: block;

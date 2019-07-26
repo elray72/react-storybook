@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import Header from './index';
-import Nav from '../../organisms/Nav';
+import Nav from '../Nav';
 import NavButton from '../../atoms/NavButton';
 
 const HeaderNav = styled(() => (
-	<Nav>
+	<Nav className="header__nav">
 		<button className="nav__link">Home</button>
 		<button className="nav__link">About</button>
 	</Nav>

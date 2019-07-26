@@ -6,7 +6,8 @@ import './_header.scss';
 interface IProps {
 	children?: React.ReactNode;
 	className?: string;
-	expanded: boolean;
+	expanded?: boolean;
+
 }
 
 const Header: React.FC<IProps> = (props) => {
