@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import './_nav.scss';
 
+import NavLine from '../../atoms/NavLine';
+
 interface IProps {
 	children?: Link[] | any;
 	className?: string;
@@ -20,6 +22,7 @@ const Nav: React.FC<IProps> = (props) => {
 		<nav className={componentClass}>
 			<ul className="nav__list">
 				{(navItems || []).map((n: Link | any, i: number) => {
+					//n.onClick
 					return (
 						<li className="nav__item" key={`nav_item_${i}`}>
 							{n}
@@ -27,6 +30,7 @@ const Nav: React.FC<IProps> = (props) => {
 					);
 				})}
 			</ul>
+			<NavLine />
 		</nav>
 	);
 };

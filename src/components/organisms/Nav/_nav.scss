@@ -1,9 +1,5 @@
 @import '../../../themes/v1/scss/common';
 
-.main {
-	min-height: 2000px;
-}
-
 .nav {
 
 	&__item {
@@ -32,7 +28,7 @@
 	}
 
 	// mobile
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(xs) {
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
@@ -100,10 +96,30 @@
 	}
 
 	// desktop
-	@include media-breakpoint-up($desktop-breakpoint) {
+	@include media-breakpoint-up(sm) {
+		position: relative;
 
+		&__list {
+			display: flex;
+			flex-direction: row;
+		}
 
+		&__item {
+			margin: 0 em(8);
+			flex-direction: row;
+		}
 
+		&__link {
+			font-size: em(16);
+			padding: em(8);
+		}
 
+		&__line {
+			position: absolute;
+			display: block;
+			height: em(4);
+			width: 100px;
+			background: $white;
+		}
 	}
 }
