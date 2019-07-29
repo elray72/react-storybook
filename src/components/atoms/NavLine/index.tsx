@@ -9,9 +9,20 @@ interface IProps {
 
 const NavLine: React.FC<IProps> = (props: any) => {
 	const componentClass = classNames(	props.className, 'nav__line');
+
 	return (
 		<span className={componentClass} />
 	);
 };
 
-export default connect()(NavLine);
+
+const mapStateToProps = (state: any, ownProps: any) => {
+	const { nav } = state;
+	console.log(state);
+	return {
+		current: nav.current,
+		...ownProps,
+	};
+};
+
+export default connect(mapStateToProps)(NavLine);

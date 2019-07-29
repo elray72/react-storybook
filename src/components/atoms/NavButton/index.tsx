@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { toggleNav } from './_actions';
 import classNames from 'classnames';
+import { toggleNav } from '../../organisms/Nav/_actions';
 
 import './_nav-button.scss';
 interface IProps {
