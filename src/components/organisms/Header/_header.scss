@@ -1,6 +1,7 @@
 @import '../../../themes/v1/scss/common';
 
 .header {
+	font-family: $font-text;
 	width: 100%;
 	margin: 0;
 	padding: 0 em(8);
@@ -15,13 +16,49 @@
 		align-items: center;
 	}
 
+	&__logo {
+		width: em(30);
+		height: em(30);
+		margin: 0 em(10);
+		z-index: 2;
+		transition: filter 0.25s ease-in-out;
+	}
+
+	&__nav {
+		z-index: 1;
+	}
+
+	&__nav-button {
+		z-index: 2;
+		@include media-breakpoint-up($desktop-breakpoint) {
+			display: none;
+		}
+	}
+
+	// Modifiers
 	&--full-width {
 		.header__inner {
 			max-width: 100%;
 		}
 	}
 
-	&__nav {
+	&--expanded {
 
+		.header__logo {
+			filter: grayscale(100%);
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
+
+		.header__nav-button {
+			@include media-no-touch {
+				&:hover {
+					.nav-button__bar {
+						background-color: $tertiary;
+					}
+				}
+			}
+		}
 	}
 }

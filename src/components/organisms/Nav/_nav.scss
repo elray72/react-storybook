@@ -1,14 +1,10 @@
 @import '../../../themes/v1/scss/common';
 
-.nav {
+.main {
+	min-height: 2000px;
+}
 
-	&__list {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-		display: flex;
-		flex-direction: row;
-	}
+.nav {
 
 	&__item {
 		border: none;
@@ -16,15 +12,98 @@
 	}
 
 	&__link {
+		font-family: $font-heading;
 		color: $white;
 		border: none;
 		background: transparent;
 		display: block;
 		height: 100%;
 		width: 100%;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		&:focus {
+			outline: none;
+		}
 
 		&--placeholder {
 			cursor: pointer;
 		}
+	}
+
+	// mobile
+	@include media-breakpoint-down(sm) {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: opacity 0.25s ease-in-out;
+		pointer-events: none;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+			background-color: $black;
+			opacity: 0.8;
+			transition: opacity 0.25s ease-in-out;
+		}
+
+		&--expanded {
+			opacity: 1;
+			pointer-events: initial;
+		}
+
+		&__list {
+			position: relative;
+			z-index: 1;
+		}
+
+		&__item {
+			width: auto;
+			margin: 0 0 em(8) 0;
+		}
+
+		&__link {
+			font-size: em(36);
+			transition: color 0.25s ease-in-out;
+			width: auto;
+			margin: 0 auto;
+			padding: 0 0 em(12, 36) 0;
+			position: relative;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: em(4, 36);
+				height: 4px;
+				width: 100%;
+				background-color: $tertiary;
+				transform: scaleY(1) scaleX(0);
+				transition: 0.35s ease-in-out;
+			}
+
+			&:hover {
+				color: $tertiary;
+				&:after {
+					transform: scaleY(1) scaleX(1);
+				}
+			}
+		}
+	}
+
+	// desktop
+	@include media-breakpoint-up($desktop-breakpoint) {
+
+
+
+
 	}
 }

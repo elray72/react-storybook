@@ -12,10 +12,6 @@ $nav-button-color: $black;
 	border: 0;
 	cursor: pointer;
 	background: transparent;
-	z-index: 3;
-	@include media-breakpoint-up(tablet) {
-		display: none;
-	}
 
 	&:focus {
 		outline: 0;

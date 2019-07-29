@@ -13,6 +13,8 @@ const Card: React.FC<IProps> = (props) => {
 	return (
 		<div>
 			<h1>This is a card</h1>
+			<p>This is some text</p>
+			<div>This is some more text</div>
 		</div>
 	);
 };

@@ -16,7 +16,7 @@ $max-height-mobile:		823px; // max height for tallest known mainstream device, P
 
 // Fonts
 // ---------------------------------------------------------------------------------------------------------------------
-$font-heading:			'Roboto Slab', sans-serif;
+$font-heading:			'Raleway', sans-serif;
 $font-text:				'Montserrat', sans-serif;
 
 
@@ -52,25 +52,24 @@ $tertiary-dark:			#ff7979;
 
 // Breakpoints
 // ---------------------------------------------------------------------------------------------------------------------
+
 $grid-breakpoints: (
-	default: 0,
-	mobile: 375px,		// iphone 6 onwards
-	phablet: 480px,		// bootstrap: 480px
-	tablet: 768px,		// bootstrap: 768px
-	laptop: 1024px,		// bootstrap: 992px
-	wide:   1440px		// bootstrap: 1200px
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
 ) !default;
 
-$screen-mobile:			map-get($grid-breakpoints, mobile);
-$screen-phablet:		map-get($grid-breakpoints, phablet);
-$screen-tablet:			map-get($grid-breakpoints, tablet);
-$screen-laptop:			map-get($grid-breakpoints, laptop);
-$screen-wide:			map-get($grid-breakpoints, wide);
-
+$screen-sm:				map-get($grid-breakpoints, sm);
+$screen-md:				map-get($grid-breakpoints, md);
+$screen-lg:				map-get($grid-breakpoints, lg);
+$screen-xl:				map-get($grid-breakpoints, xl);
+$desktop-breakpoint: 	md;
 
 // Grid
 // ---------------------------------------------------------------------------------------------------------------------
 $grid-columns:				12;
 $grid-gutter-width:			30px;
-$grid-float-breakpoint:		$screen-phablet;				// nav expand
+$grid-float-breakpoint:		$screen-md;						// nav expand
 $grid-float-breakpoint-max:	($grid-float-breakpoint - 1);	// nav collapse

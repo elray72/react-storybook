@@ -1,25 +1,18 @@
 @import "../../../themes/v1/scss/common";
 
-.image {
-	display: flex;
-	height: 100%;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	padding: em(16);
+.logo {
+	display: block;
 	margin: 0;
+	padding: 0;
+	overflow: hidden;
 
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
+	a {
+		cursor: pointer;
 	}
 
-	&--ah {
-
-		img {
-			width: auto;
-			height: 100%;
-		}
+	svg {
+		display: block;
+		width: auto;
+		height: 100%;
 	}
 }

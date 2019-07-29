@@ -12,6 +12,7 @@ import ToDo from '../pages/ToDo';
 import Test from '../pages/Test';
 import NotFound from '../pages/NotFound';
 import NavButton from './atoms/NavButton';
+import Logo from './atoms/Logo';
 
 const App: React.FC = () => {
 	return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
 				<meta name="description" content="React SPA example. Built on Typescript and Redux." />
 			</Helmet>
 			<Header>
+				<Logo src="/assets/img/r-logo.svg" title="R logo" />
 				<Nav>
 					<Link to="/" className="nav__link" title="Home">
 						Home
