@@ -24,7 +24,7 @@ const HeaderNav = styled((props) => (
 
 const HeaderNavButton = styled(NavButton)`
 	margin-left: auto;
-	.nav-button__bar {
+	.hamburger__bar {
 		background: #fff;
 	}
 `;
@@ -34,6 +34,6 @@ storiesOf('Components|Organisms/Header', module)
 		<Header className="header--full-width">
 			<HeaderLogo className="header__logo" src={RLogo} title="R logo" />
 			<HeaderNav className="header__nav" marker={true} />
-			<HeaderNavButton className="header__nav-button" />
+			<HeaderNavButton className="header__hamburger" />
 		</Header>
 	));

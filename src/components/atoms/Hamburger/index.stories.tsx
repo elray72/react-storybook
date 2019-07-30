@@ -10,7 +10,7 @@ const NavButton = styled(Button)`
 `;
 
 // Navigation
-storiesOf('Navigation|NavButton', module)
+storiesOf('Navigation|Hamburger', module)
 	.add('Default', () => <NavButton type={HamburgerType.Default} />)
 	.add('Arrow up', () => <NavButton type={HamburgerType.ArrowUp} />)
 	.add('Arrow down', () => <NavButton type={HamburgerType.ArrowDown} />)
@@ -18,7 +18,7 @@ storiesOf('Navigation|NavButton', module)
 	.add('Arrow right', () => <NavButton type={HamburgerType.ArrowRight} />);
 
 // Component
-storiesOf('Components|Atoms/NavButton', module)
+storiesOf('Components|Atoms/Hamburger', module)
 	.add('Default', () => <NavButton type={HamburgerType.Default} />)
 	.add('Arrow up', () => <NavButton type={HamburgerType.ArrowUp} />)
 	.add('Arrow down', () => <NavButton type={HamburgerType.ArrowDown} />)

@@ -28,10 +28,6 @@
 		z-index: 1;
 	}
 
-	&__nav-button {
-		z-index: 2;
-	}
-
 	// Modifiers
 	&--full-width {
 		.header__inner {
@@ -47,11 +43,20 @@
 				filter: grayscale(0);
 			}
 		}
+	}
+}
 
-		.header__nav-button {
+// Hamburger
+.header {
+	&__hamburger {
+		z-index: 2;
+	}
+
+	&--expanded {
+		.header__hamburger {
 			@include media-breakpoint-down(sm) {
 				&:hover {
-					.nav-button__bar {
+					.hamburger__bar {
 						background-color: $tertiary;
 					}
 				}

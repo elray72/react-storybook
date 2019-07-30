@@ -1,5 +1,6 @@
 @import '../../../themes/v1/scss/common';
 
+$hamburger-prefix: 'hamburger';
 $hamburger-size: 52px;
 $hamburger-animation-duration: 0.25s;
 $hamburger-color: $black;
@@ -35,13 +36,13 @@ $hamburger-color: $black;
 	}
 
 	&--init {
-		.nav-button__bar {
+		.hamburger__bar {
 			animation: none !important;
 		}
 	}
 
 	&--close {
-		.nav-button__bar {
+		.hamburger__bar {
 			&:nth-child(1) {
 				animation: close-top-o $hamburger-animation-duration;
 				animation-fill-mode: forwards;
@@ -58,8 +59,8 @@ $hamburger-color: $black;
 			}
 		}
 
-		&.nav-button--expanded {
-			.nav-button__bar {
+		&.hamburger--expanded {
+			.hamburger__bar {
 				visibility: visible;
 
 				&:nth-child(1) {
@@ -80,8 +81,8 @@ $hamburger-color: $black;
 	}
 
 	&--arrow {
-		&.nav-button--expanded {
-			.nav-button__bar {
+		&.hamburger--expanded {
+			.hamburger__bar {
 				&:nth-child(1) {
 					transform: translateY(em(4)) translateX(em(4)) rotate(45deg) scaleX(0.5);
 				}
@@ -97,14 +98,14 @@ $hamburger-color: $black;
 		}
 
 		&-up {
-			@extend .nav-button--arrow;
-			&.nav-button--expanded {
+			@extend .hamburger--arrow;
+			&.hamburger--expanded {
 				transform: rotate(0);
 			}
 		}
 
 		&-down {
-			&.nav-button--expanded {
+			&.hamburger--expanded {
 				.nav-button__bar {
 					&:nth-child(1) {
 						transform: translateY(em(13)) translateX(em(4)) rotate(-45deg) scaleX(0.5);
@@ -122,15 +123,15 @@ $hamburger-color: $black;
 		}
 
 		&-left {
-			@extend .nav-button--arrow;
-			&.nav-button--expanded {
+			@extend .hamburger--arrow;
+			&.hamburger--expanded {
 				transform: rotate(-90deg);
 			}
 		}
 
 		&-right {
-			@extend .nav-button--arrow-down;
-			&.nav-button--expanded {
+			@extend .hamburger--arrow-down;
+			&.hamburger--expanded {
 				transform: rotate(-90deg);
 			}
 		}

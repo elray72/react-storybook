@@ -35,7 +35,7 @@ const Nav: React.FC<IProps> = (props) => {
 			_moveMarker();
 			_windowResizeHandler();
 		});
-	}, [navItemsRef]);
+	}, [navItemsRef, resizing]);
 
 	const moveMarkerToLink = (elem: any) => {
 		const marker = navLineRef.current;
