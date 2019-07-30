@@ -8,8 +8,8 @@ import Nav from '../Nav';
 import NavButton from '../../atoms/NavButton';
 import RLogo from '../../../../public/assets/img/r-logo-alt.svg';
 
-const HeaderNav = styled(() => (
-	<Nav className="header__nav" marker>
+const HeaderNav = styled((props) => (
+	<Nav {...props}>
 		<button className="nav__link">Home</button>
 		<button className="nav__link">Our work</button>
 		<button className="nav__link">What we do</button>
@@ -33,7 +33,7 @@ storiesOf('Components|Organisms/Header', module)
 	.add('Default', () => (
 		<Header className="header--full-width">
 			<HeaderLogo className="header__logo" src={RLogo} title="R logo" />
-			<HeaderNav />
+			<HeaderNav className="header__nav" marker={true} />
 			<HeaderNavButton className="header__nav-button" />
 		</Header>
 	));
