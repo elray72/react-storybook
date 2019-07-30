@@ -16,6 +16,6 @@
 	@return $pixels / $context * 1em;
 }
 
-@function timing($context) {
+@function cubic-bezier($context) {
 	@return map-get($cubic-bezier-presets, $context);
 }

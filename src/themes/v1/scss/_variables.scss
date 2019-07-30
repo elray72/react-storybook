@@ -10,7 +10,7 @@ $page-max-width:		1200px;
 
 // Layout
 // ---------------------------------------------------------------------------------------------------------------------
-$header-height-m:		80px;
+$header-height-m:		64px;
 $max-height-mobile:		823px; // max height for tallest known mainstream device, Pixel XL
 
 
@@ -65,7 +65,7 @@ $screen-sm:				map-get($grid-breakpoints, sm);
 $screen-md:				map-get($grid-breakpoints, md);
 $screen-lg:				map-get($grid-breakpoints, lg);
 $screen-xl:				map-get($grid-breakpoints, xl);
-$desktop-breakpoint: 	md;
+
 
 // Grid
 // ---------------------------------------------------------------------------------------------------------------------

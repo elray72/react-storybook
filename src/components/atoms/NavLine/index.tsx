@@ -8,8 +8,7 @@ interface IProps {
 }
 
 const NavLine: React.FC<IProps> = (props: any) => {
-	const componentClass = classNames(	props.className, 'nav__line');
-
+	const componentClass = classNames( props.className, 'nav__line');
 	return (
 		<span className={componentClass} />
 	);

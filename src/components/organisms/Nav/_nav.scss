@@ -1,7 +1,6 @@
 @import '../../../themes/v1/scss/common';
 
 .nav {
-
 	&__item {
 		border: none;
 		background: transparent;
@@ -27,8 +26,29 @@
 		}
 	}
 
+	&__marker {
+		position: absolute;
+		bottom: em(-14);
+		left: 0;
+		display: block;
+		height: em(4);
+		width: em(1);
+		background: $secondary;
+		transition: 0.35s cubic-bezier(ease-out-back);
+		opacity: 0;
+
+		&[style] {
+			opacity: 1;
+		}
+	}
+
+	// prevents undesirable animations during page resize
+	&--resizing {
+		transition: none !important;
+	}
+
 	// mobile
-	@include media-breakpoint-down(xs) {
+	@include media-breakpoint-down(sm) {
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
@@ -83,7 +103,7 @@
 				width: 100%;
 				background-color: $tertiary;
 				transform: scaleY(1) scaleX(0);
-				transition: 0.35s ease-in-out;
+				transition: 0.25s ease-in-out;
 			}
 
 			&:hover {
@@ -96,10 +116,12 @@
 	}
 
 	// desktop
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
 		position: relative;
+		display: flex;
 
 		&__list {
+			margin: 0;
 			display: flex;
 			flex-direction: row;
 		}
@@ -107,19 +129,12 @@
 		&__item {
 			margin: 0 em(8);
 			flex-direction: row;
+			min-height: em(35);
 		}
 
 		&__link {
 			font-size: em(16);
 			padding: em(8);
-		}
-
-		&__line {
-			position: absolute;
-			display: block;
-			height: em(4);
-			width: 100px;
-			background: $white;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 @import '../../../themes/v1/scss/common';
 
-$nav-button-size: 60px;
+$nav-button-size: 52px;
 $nav-button-timing: 0.25s;
 $nav-button-color: $black;
 
@@ -12,6 +12,9 @@ $nav-button-color: $black;
 	border: 0;
 	cursor: pointer;
 	background: transparent;
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
 
 	&:focus {
 		outline: 0;
@@ -23,7 +26,7 @@ $nav-button-color: $black;
 
 	&__bar {
 		width: em(30);
-		height: em($nav-button-size / 15);
+		height: em(4);
 		background-color: $nav-button-color;
 		border-radius: em(2);
 		display: block;

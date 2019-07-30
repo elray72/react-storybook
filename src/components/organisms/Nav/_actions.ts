@@ -3,7 +3,7 @@ export const toggleNav = (expanded: boolean) => ({
 	expanded,
 });
 
-export const trackNavClick = (current: string = 'Home') => ({
+export const trackNavClick = (current: any = null) => ({
 	type: 'TRACK_NAV_CLICK',
 	current,
 });

@@ -8,7 +8,7 @@ import NavButton from '../../atoms/NavButton';
 import logo from '../../../../public/assets/img/r-logo-alt.svg';
 
 const HeaderNav = styled(() => (
-	<Nav className="header__nav">
+	<Nav className="header__nav" marker>
 		<button className="nav__link">Home</button>
 		<button className="nav__link">Our work</button>
 		<button className="nav__link">What we do</button>
