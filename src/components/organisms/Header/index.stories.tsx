@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Header from './index';
 import HeaderLogo from '../../atoms/Logo'
 import Nav from '../Nav';
-import NavButton from '../../atoms/NavButton';
+import NavButton from '../../atoms/Hamburger';
 import RLogo from '../../../../public/assets/img/r-logo-alt.svg';
 
 const HeaderNav = styled((props) => (

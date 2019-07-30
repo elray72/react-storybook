@@ -11,7 +11,7 @@ import Home from '../pages/Home';
 import ToDo from '../pages/ToDo';
 import Test from '../pages/Test';
 import NotFound from '../pages/NotFound';
-import NavButton from './atoms/NavButton';
+import NavButton from './atoms/Hamburger';
 import Logo from './atoms/Logo';
 
 const App: React.FC = () => {

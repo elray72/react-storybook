@@ -4,7 +4,7 @@ import Page from '../../components/templates/Page';
 import Wizard from '../../components/organisms/Wizard';
 import Step from '../../components/organisms/Wizard/Step';
 import ToDo from '../../examples/ToDo';
-import NavButton from '../../components/atoms/NavButton';
+import NavButton from '../../components/atoms/Hamburger';
 
 interface IProps {
 	className?: string;

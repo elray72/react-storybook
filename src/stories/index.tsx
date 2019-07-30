@@ -6,11 +6,13 @@ import configureStore from '../store/configureStore';
 import 'sanitize.css';
 import '../themes/v1/scss/style.scss';
 
+const overview = require.context('./', true, /\.intro\.tsx$/);
 const foundation = require.context('./', true, /\.stories\.tsx$/);
 const components = require.context('../components', true, /\.stories\.tsx$/);
 const store = configureStore({}, {});
 
 const loadStories = () => {
+	overview.keys().forEach(overview);
 	foundation.keys().forEach(foundation);
 	components.keys().forEach(components);
 };
