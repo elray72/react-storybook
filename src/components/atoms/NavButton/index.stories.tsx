@@ -1,6 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import NavButton, { NavButtonType } from './index';
+import Button, { NavButtonType } from './index';
+import styled from 'styled-components';
+
+const NavButton = styled(Button)`
+	height: 60px;
+	width: 60px;
+	margin: 8px;
+`;
 
 // Navigation
 storiesOf('Navigation|NavButton', module)
