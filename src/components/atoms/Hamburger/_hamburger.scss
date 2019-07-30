@@ -1,13 +1,13 @@
 @import '../../../themes/v1/scss/common';
 
-$nav-button-size: 52px;
-$nav-button-timing: 0.25s;
-$nav-button-color: $black;
+$hamburger-size: 52px;
+$hamburger-animation-duration: 0.25s;
+$hamburger-color: $black;
 
-.nav-button {
+.hamburger {
 	display: block;
-	height: em($nav-button-size);
-	width: em($nav-button-size);
+	height: em($hamburger-size);
+	width: em($hamburger-size);
 	padding: 0;
 	border: 0;
 	cursor: pointer;
@@ -27,11 +27,11 @@ $nav-button-color: $black;
 	&__bar {
 		width: em(30);
 		height: em(4);
-		background-color: $nav-button-color;
+		background-color: $hamburger-color;
 		border-radius: em(2);
 		display: block;
 		margin: em(4) auto;
-		transition: all $nav-button-timing ease-in-out;
+		transition: all $hamburger-animation-duration ease-in-out;
 	}
 
 	&--init {
@@ -43,7 +43,7 @@ $nav-button-color: $black;
 	&--close {
 		.nav-button__bar {
 			&:nth-child(1) {
-				animation: close-top-o $nav-button-timing;
+				animation: close-top-o $hamburger-animation-duration;
 				animation-fill-mode: forwards;
 				animation-iteration-count: 1;
 			}
@@ -53,7 +53,7 @@ $nav-button-color: $black;
 			}
 
 			&:nth-child(3) {
-				animation: close-bottom-o $nav-button-timing;
+				animation: close-bottom-o $hamburger-animation-duration;
 				animation-fill-mode: forwards;
 			}
 		}
@@ -63,7 +63,7 @@ $nav-button-color: $black;
 				visibility: visible;
 
 				&:nth-child(1) {
-					animation: close-top-x $nav-button-timing;
+					animation: close-top-x $hamburger-animation-duration;
 					animation-fill-mode: forwards;
 				}
 
@@ -72,7 +72,7 @@ $nav-button-color: $black;
 				}
 
 				&:nth-child(3) {
-					animation: close-bottom-x $nav-button-timing;
+					animation: close-bottom-x $hamburger-animation-duration;
 					animation-fill-mode: forwards;
 				}
 			}

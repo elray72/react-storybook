@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { toggleNav } from '../../organisms/Nav/_actions';
-import './_nav-button.scss';
+import './_hamburger.scss';
 
 interface IProps {
 	className?: string;
@@ -12,7 +12,7 @@ interface IProps {
 	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const NavButtonType = {
+export const HamburgerType = {
 	Default: 'close',
 	ArrowUp: 'arrow-up',
 	ArrowDown: 'arrow-down',
@@ -20,7 +20,7 @@ export const NavButtonType = {
 	ArrowRight: 'arrow-right',
 };
 
-const NavButton: React.FC<IProps> = (props: any) => {
+const Hamburger: React.FC<IProps> = (props: any) => {
 	const [init, setInit] = React.useState(true);
 	const [expanded, setExpanded] = React.useState(props.expanded ? props.expanded : false);
 
@@ -37,25 +37,25 @@ const NavButton: React.FC<IProps> = (props: any) => {
 	};
 
 	const componentType = props.type
-		? `nav-button--${props.type}`
-		: 'nav-button--close';
+		? `hamburger--${props.type}`
+		: 'hamburger--close';
 	const componentClass = classNames(
 		props.className,
-		'nav-button',
+		'hamburger',
 		componentType,
 		{
-			'nav-button--init': init, // init state has styles preventing the initial reverse animation
-			'nav-button--expanded': expanded, // expanded useState
+			'hamburger--init': init, // init state has styles preventing the initial reverse animation
+			'hamburger--expanded': expanded, // expanded useState
 		},
 	);
 
 	return (
 		<button type="button" className={componentClass} onClick={handleOnClick}>
-			<span className="nav-button__bar" />
-			<span className="nav-button__bar" />
-			<span className="nav-button__bar" />
+			<span className="hamburger__bar" />
+			<span className="hamburger__bar" />
+			<span className="hamburger__bar" />
 		</button>
 	);
 };
 
-export default connect()(NavButton);
+export default connect()(Hamburger);

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import './_caret.scss';
+import './_arrows.scss';
 
 interface IProps {
 	expanded?: boolean;
@@ -17,7 +17,7 @@ export const CaretType = {
 	LeftRight: 'left-right',
 };
 
-const Caret: React.FC<IProps> = (props) => {
+const Arrows: React.FC<IProps> = (props) => {
 	const [init, setInit] = React.useState(true);
 	const [expanded, setExpanded] = React.useState(props.expanded);
 
@@ -47,4 +47,4 @@ const Caret: React.FC<IProps> = (props) => {
 	);
 };
 
-export default Caret;
+export default Arrows;
