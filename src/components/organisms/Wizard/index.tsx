@@ -2,8 +2,6 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './_wizard.scss';
 
-import Step from './Step';
-
 interface IProps {
 	children?: React.ReactNode;
 	className?: string;
