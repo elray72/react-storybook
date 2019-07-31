@@ -10,5 +10,5 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Molecules/Info', module)
+storiesOf('Components|Molecules/Island', module)
 	.add('Default', () => <StoryComponent />);

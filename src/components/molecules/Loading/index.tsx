@@ -1,18 +1,17 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import './_arrow.scss';
 
 interface IProps {
 	className?: string;
 }
 
 export const Component: React.FC<IProps> = (props) => {
-	const componentClass = classNames(props.className, 'arrow');
+	const componentClass = classNames(props.className, '');
 
 	return (
-		<span className={componentClass}>
+		<div className={componentClass}>
 			Component
-		</span>
+		</div>
 	);
 };
 

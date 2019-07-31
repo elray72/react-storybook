@@ -1,14 +1,23 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Story from '../../templates/Story';
-import Component from './index';
+import Story, { StoryContent, StoryDemo, StoryComponent } from '../../templates/Story';
+import Arrow from './index';
 
-const StoryComponent = () => (
+const StoryPage = () => (
 	<Story>
-		<Component />
+		<StoryContent>
+			<h1>Arrow</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et in, labore sapiente sint tenetur voluptate!</p>
+		</StoryContent>
+		<StoryDemo>
+			<Arrow />
+			<Arrow />
+			<Arrow />
+			<Arrow />
+		</StoryDemo>
 	</Story>
 );
 
 // Component
 storiesOf('Components|Atoms/Arrow', module)
-	.add('Default', () => <StoryComponent />);
+	.add('Default', () => <StoryPage />);

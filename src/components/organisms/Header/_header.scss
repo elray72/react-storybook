@@ -50,6 +50,9 @@
 .header {
 	&__hamburger {
 		z-index: 2;
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
 	}
 
 	&--expanded {

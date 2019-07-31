@@ -13,9 +13,6 @@ $hamburger-color: $black;
 	border: 0;
 	cursor: pointer;
 	background: transparent;
-	@include media-breakpoint-up(md) {
-		display: none;
-	}
 
 	&:focus {
 		outline: 0;
