@@ -24,11 +24,32 @@
 	&__demo {
 		background: $grey-pale;
 		border-radius: em(4);
-		padding: em(16);
+		padding: em(24) em(16);
 
 		&--rows {
 			display: flex;
 			flex-direction: row;
+			flex-flow: row wrap;
+
+			.story__item {
+				margin: 0 em(16) em(16);
+				display: flex;
+				flex-direction: column-reverse;
+
+				&-label {
+					font-weight: 600;
+					color: $green;
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	&__item {
+		&-label {
+			font-family: $font-text;
+			font-size: em(12);
 		}
 	}
 }

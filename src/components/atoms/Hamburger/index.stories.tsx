@@ -1,22 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import Story, { StoryContent, StoryDemo, StoryLayout } from '../../templates/Story';
-import Component, { HamburgerType } from './index';
+import Story, { StoryContent, StoryDemo, StoryItem, StoryLayout } from '../../templates/Story';
+import BHamburger, { HamburgerType } from './index';
 
-const Hamburger = styled(Component)`
+const Hamburger = styled(BHamburger)`
 	height: 60px;
 	width: 60px;
-	margin: 8px;
+	margin: 0 16px;
 `;
-//
-// // Navigation
-// storiesOf('Navigation|Hamburger', module)
-// 	.add('Default', () => <NavButton type={HamburgerType.Default} />)
-// 	.add('Arrow up', () => <NavButton type={HamburgerType.ArrowUp} />)
-// 	.add('Arrow down', () => <NavButton type={HamburgerType.ArrowDown} />)
-// 	.add('Arrow left', () => <NavButton type={HamburgerType.ArrowLeft} />)
-// 	.add('Arrow right', () => <NavButton type={HamburgerType.ArrowRight} />);
 
 const StoryComponent = () => (
 	<Story>
@@ -25,8 +17,21 @@ const StoryComponent = () => (
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et in, labore sapiente sint tenetur voluptate!</p>
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
-			<Hamburger type={HamburgerType.Default} />
-			<Hamburger type={HamburgerType.Default} />
+			<StoryItem label="Default">
+				<Hamburger type={HamburgerType.Default} />
+			</StoryItem>
+			<StoryItem label="Arrow up">
+				<Hamburger type={HamburgerType.ArrowUp} />
+			</StoryItem>
+			<StoryItem label="Arrow down">
+				<Hamburger type={HamburgerType.ArrowDown} />
+			</StoryItem>
+			<StoryItem label="Arrow left">
+				<Hamburger type={HamburgerType.ArrowLeft} />
+			</StoryItem>
+			<StoryItem label="Arrow right">
+				<Hamburger type={HamburgerType.ArrowRight} />
+			</StoryItem>
 		</StoryDemo>
 	</Story>
 );
@@ -34,21 +39,3 @@ const StoryComponent = () => (
 // Component
 storiesOf('Components|Atoms/Hamburger', module)
 	.add('Default', () => <StoryComponent />);
-//
-//
-//
-//
-// import React from 'react';
-// import { storiesOf } from '@storybook/react';
-// import Button, { HamburgerType } from './index';
-// import styled from 'styled-components';
-//
-
-//
-// // Component
-// storiesOf('Components|Atoms/Hamburger', module)
-// 	.add('Default', () => <NavButton type={HamburgerType.Default} />)
-// 	.add('Arrow up', () => <NavButton type={HamburgerType.ArrowUp} />)
-// 	.add('Arrow down', () => <NavButton type={HamburgerType.ArrowDown} />)
-// 	.add('Arrow left', () => <NavButton type={HamburgerType.ArrowLeft} />)
-// 	.add('Arrow right', () => <NavButton type={HamburgerType.ArrowRight} />);

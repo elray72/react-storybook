@@ -103,7 +103,7 @@ $hamburger-color: $black;
 
 		&-down {
 			&.hamburger--expanded {
-				.nav-button__bar {
+				.hamburger__bar {
 					&:nth-child(1) {
 						transform: translateY(em(13)) translateX(em(4)) rotate(-45deg) scaleX(0.5);
 					}
