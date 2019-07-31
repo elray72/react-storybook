@@ -4,8 +4,16 @@ import './_arrow.scss';
 
 interface IProps {
 	className?: string;
+	size?: string;
 	type?: string;
 }
+
+export const ArrowSize = {
+	Inline: 'inline',
+	Small: 'sm',
+	Medium: 'md',
+	Large: 'lg',
+};
 
 export const ArrowType = {
 	Up: 'arrow-up',
@@ -15,12 +23,12 @@ export const ArrowType = {
 };
 
 export const Component: React.FC<IProps> = (props) => {
-	const componentClass = classNames(props.className, 'arrow');
+	const arrowClass = props.type ? `arrow--${props.type}`  : null;
+	const arrowSize = props.type ? `arrow--${props.type}`  : 'arrow--in';
+	const componentClass = classNames(props.className, 'arrow', arrowClass);
 
 	return (
-		<span className={componentClass}>
-			Component
-		</span>
+		<span className={componentClass} />
 	);
 };
 
