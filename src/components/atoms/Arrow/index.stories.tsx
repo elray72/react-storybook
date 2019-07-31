@@ -1,23 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
-import Story, { StoryContent, StoryDemo, StoryComponent } from '../../templates/Story';
-import Arrow from './index';
+import Story, { StoryContent, StoryDemo, StoryItem, StoryLayout } from '../../templates/Story';
+import BHamburger, { HamburgerType } from './index';
 
-const StoryPage = () => (
+const Hamburger = styled(BHamburger)`
+	height: 60px;
+	width: 60px;
+	margin: 0 16px;
+`;
+
+const StoryComponent = () => (
 	<Story>
 		<StoryContent>
-			<h1>Arrow</h1>
+			<h1>Hamburger</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et in, labore sapiente sint tenetur voluptate!</p>
 		</StoryContent>
-		<StoryDemo>
-			<Arrow />
-			<Arrow />
-			<Arrow />
-			<Arrow />
+		<StoryDemo layout={StoryLayout.Rows}>
+			<StoryItem label="Default">
+				<Hamburger type={HamburgerType.Default} />
+			</StoryItem>
+			<StoryItem label="Arrow up">
+				<Hamburger type={HamburgerType.ArrowUp} />
+			</StoryItem>
+			<StoryItem label="Arrow down">
+				<Hamburger type={HamburgerType.ArrowDown} />
+			</StoryItem>
+			<StoryItem label="Arrow left">
+				<Hamburger type={HamburgerType.ArrowLeft} />
+			</StoryItem>
+			<StoryItem label="Arrow right">
+				<Hamburger type={HamburgerType.ArrowRight} />
+			</StoryItem>
 		</StoryDemo>
 	</Story>
 );
 
 // Component
-storiesOf('Components|Atoms/Arrow', module)
-	.add('Default', () => <StoryPage />);
+storiesOf('Components|Atoms/Hamburger', module)
+	.add('Default', () => <StoryComponent />);

@@ -35,6 +35,12 @@
 				display: flex;
 				flex-direction: column-reverse;
 
+				> *:not(.story__item-label) {
+					margin: 0 em(16);
+				}
+
+				//.hamburegr
+
 				&-label {
 					font-weight: 600;
 					color: $green;

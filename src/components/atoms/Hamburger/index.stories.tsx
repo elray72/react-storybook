@@ -1,13 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import Story, { StoryContent, StoryDemo, StoryItem, StoryLayout } from '../../templates/Story';
 import BHamburger, { HamburgerType } from './index';
+import styled from 'styled-components';
 
 const Hamburger = styled(BHamburger)`
 	height: 60px;
 	width: 60px;
-	margin: 0 16px;
 `;
 
 const StoryComponent = () => (
