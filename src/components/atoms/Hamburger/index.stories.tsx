@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Story, { StoryContent, StoryDemo, StoryItem, StoryLayout } from '../../templates/Story';
-import BHamburger, { HamburgerType } from './index';
+import Hamburger, { HamburgerType } from './index';
 import styled from 'styled-components';
 
-const Hamburger = styled(BHamburger)`
+const SHamburger = styled(Hamburger)`
 	height: 60px;
 	width: 60px;
 `;
@@ -17,19 +17,19 @@ const StoryComponent = () => (
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
 			<StoryItem label="Default">
-				<Hamburger type={HamburgerType.Default} />
+				<SHamburger type={HamburgerType.Default} />
 			</StoryItem>
 			<StoryItem label="Arrow up">
-				<Hamburger type={HamburgerType.ArrowUp} />
+				<SHamburger type={HamburgerType.ArrowUp} />
 			</StoryItem>
 			<StoryItem label="Arrow down">
-				<Hamburger type={HamburgerType.ArrowDown} />
+				<SHamburger type={HamburgerType.ArrowDown} />
 			</StoryItem>
 			<StoryItem label="Arrow left">
-				<Hamburger type={HamburgerType.ArrowLeft} />
+				<SHamburger type={HamburgerType.ArrowLeft} />
 			</StoryItem>
 			<StoryItem label="Arrow right">
-				<Hamburger type={HamburgerType.ArrowRight} />
+				<SHamburger type={HamburgerType.ArrowRight} />
 			</StoryItem>
 		</StoryDemo>
 	</Story>
