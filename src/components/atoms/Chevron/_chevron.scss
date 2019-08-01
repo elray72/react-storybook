@@ -1,0 +1,121 @@
+@import '../../../themes/v1/scss/common';
+
+$animation-duration: 0.35s;
+$up-color: $off-black;
+$down-color: $off-black;
+$left-color: $off-black;
+$right-color: $off-black;
+
+.chevron {
+	width: 1em;
+	height: 1em;
+	display: block;
+	position: relative;
+	&--sm {
+		font-size: em(16);
+	}
+	&--md {
+		font-size: em(24);
+	}
+	&--lg {
+		font-size: em(32);
+	}
+	&--xl {
+		font-size: em(64);
+	}
+
+	svg {
+		@include absolute(0, 0);
+		margin: auto;
+	}
+
+	%chevron__line {
+		stroke-width: 10;
+		stroke-linecap: round;
+		transition: transform $animation-duration, stroke $animation-duration;
+	}
+
+	&__line1 {
+		@extend %chevron__line;
+		-webkit-transform-origin: 50px 50px;
+		transform-origin: 50px 50px;
+	}
+
+	&__line2 {
+		@extend %chevron__line;
+		-webkit-transform-origin: 50px 50px;
+		transform-origin: 50px 50px;
+	}
+
+	&--up {
+		display: block;
+
+		.chevron {
+			&__container {
+				transition: transform $animation-duration;
+				transform: translateY(-13px);
+				stroke: $up-color;
+			}
+			&__line1 {
+				transform: rotate(-40deg);
+				stroke: $up-color;
+			}
+			&__line2 {
+				transform: rotate(40deg);
+				stroke: $up-color;
+			}
+		}
+	}
+
+	&--down {
+		@extend .chevron--up;
+
+		.chevron {
+			&__container {
+				transition: transform $animation-duration;
+				transform: translateY(13px);
+			}
+
+			&__line1 {
+				transform: rotate(40deg);
+				stroke: $down-color;
+			}
+			&__line2 {
+				transform: rotate(-40deg);
+				stroke: $down-color;
+			}
+		}
+	}
+
+	&--left {
+		@extend .chevron--up;
+		svg {
+			transform: rotate(-90deg);
+		}
+
+		.chevron {
+			&__line1 {
+				stroke: $left-color;
+			}
+			&__line2 {
+				stroke: $left-color;
+			}
+		}
+	}
+
+	&--right {
+		@extend .chevron--down;
+		svg {
+			transform: rotate(-90deg);
+		}
+
+		.chevron {
+			&__line1 {
+				stroke: $right-color;
+			}
+			&__line2 {
+				stroke: $right-color;
+			}
+		}
+	}
+}

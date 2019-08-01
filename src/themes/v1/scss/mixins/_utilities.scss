@@ -10,10 +10,19 @@
 	}
 }
 
-@mixin absolute($top, $right, $bottom, $left) {
-	position: absolute;
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
 	top: $top;
 	right: $right;
 	bottom: $bottom;
 	left: $left;
+}
+
+@mixin absolute($top, $right: $top, $bottom: $top, $left: $right) {
+	position: absolute;
+	@include position($top, $right, $bottom, $left);
+}
+
+@mixin fixed($top, $right: $top, $bottom: $top, $left: $right) {
+	position: fixed;
+	@include position($top, $right, $bottom, $left);
 }
