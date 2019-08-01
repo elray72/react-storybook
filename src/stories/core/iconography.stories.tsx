@@ -12,8 +12,7 @@ const StoryComponent = () => (
 		<StoryContent>
 			<h1>Iconography</h1>
 			<p>
-				This design system uses icons from the free version of
-				<a href="https://github.com/FortAwesome/">Font Awesome</a>.
+				This design system uses icons from the free version of <a href="https://github.com/FortAwesome/">Font Awesome</a>.
 			</p>
 		</StoryContent>
 	</Story>

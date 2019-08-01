@@ -11,6 +11,7 @@ const StoryComponent = () => (
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
 			<StoryItem label="Primary">
+				<br/>
 				<Button className="button" theme="primary">Primary</Button>
 			</StoryItem>
 			<StoryItem label="Secondary">
