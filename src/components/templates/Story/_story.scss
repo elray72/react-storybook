@@ -7,8 +7,15 @@
 		margin-right: auto;
 		margin-bottom: em(24, 32);
 		display: inline-block;
-		border-bottom: 3px solid $tertiary;
+		border-bottom: 3px solid $secondary;
 		padding-bottom: em(2);
+	}
+
+	br {
+		content: '';
+		display: block;
+		width: 100%;
+		margin-bottom: rem(12);
 	}
 
 	&__inner {

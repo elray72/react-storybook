@@ -1,8 +1,42 @@
 @import '../../../themes/v1/scss/common';
 
-$nav-button-size: 60px;
-$nav-button-timing: 0.25s;
-$nav-button-color: $black;
+.badge {
+	font-family: $font-heading;
+	display: flex;
+	color: $white;
+	background: $red;
+	@include absolute(0, 0, auto, auto);
+	height: rem(20);
+	padding: 0 rem(6);
+	z-index: 1;
+	position: absolute;
+	flex-wrap: wrap;
+	font-size: em(10);
+	min-width: rem(20);
+	transform: scale(1) translate(50%, -50%);
+	transition: transform 0.25s ease-in-out;
+	align-items: center;
+	border-radius: rem(10);
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	transform-origin: 100% 0;
 
-.caret {
+	&-container {
+		display: inline-flex;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	&--primary {
+		background: $primary;
+	}
+
+	&--secondary {
+		background: $secondary;
+	}
+
+	&--tertiary {
+		background: $tertiary;
+	}
 }

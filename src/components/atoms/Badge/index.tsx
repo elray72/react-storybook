@@ -1,18 +1,41 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import './_badge.scss';
 
 interface IProps {
+	children: React.ReactNode;
 	className?: string;
+	color?: string;
+	max?: number;
+	value?: string | number;
 }
 
-export const Component: React.FC<IProps> = (props) => {
-	const componentClass = classNames(props.className, '');
+/* todo: button, icon, wrap an item
+ */
+
+const BadgeContainer: React.FC<IProps> = (props) => {
+	const componentColor = props.color ? `badge--${props.color}` : null;
+	const componentClass = classNames(props.className, 'badge', componentColor, {
+		'badge--text': typeof props.value === 'string',
+	});
+
+	let { value, max } = props;
+	if (typeof value === 'number' && typeof max !== 'undefined') {
+		value = value <= max ? value : `${max}+`;
+	}
+	// max = max ? max : value as number;
+	// if (value) {
+	// 	value = typeof value === 'number'
+	// 		? value <= max ? value : max
+	// 		: props.value;
+	// }
 
 	return (
-		<div className={componentClass}>
-			Component
-		</div>
+		<span className="badge-container">
+			{props.children}
+			<span className={componentClass}>{value}</span>
+		</span>
 	);
 };
 
-export default Component;
+export default BadgeContainer;

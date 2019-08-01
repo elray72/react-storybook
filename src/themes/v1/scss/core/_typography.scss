@@ -6,7 +6,7 @@
 
 body {
 	font-family: $font-text, sans-serif;
-	font-size: 16px;
+	font-size: $base-font-size;
 	color: $off-black;
 }
 
@@ -18,27 +18,27 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	font-size: em(40);
-	margin-bottom: em(16, 40);
+	margin-bottom: rem(16);
 }
 
 h2 {
 	font-size: em(32);
-	margin-bottom: em(16, 32);
+	margin-bottom: rem(16);
 }
 
 h3 {
 	font-size: em(24);
-	margin-bottom: em(16, 24);
+	margin-bottom: rem(16);
 }
 
 h4, h5 {
 	font-size: em(20);
-	margin-bottom: em(16, 20);
+	margin-bottom: rem(16);
 }
 
 p {
 	margin: 0 0 em(8) 0;
-	line-height: em(24);
+	line-height: 1.5em;
 
 	br {
 		content: '';
@@ -49,10 +49,10 @@ p {
 
 	&.intro {
 		font-size: em(20);
-		margin: 0 0 em(8, 20) 0;
+		margin: 0 0 0.5em 0;
 
 		br {
-			margin-bottom: em(8, 20);
+			margin-bottom: 0.5em;
 		}
 	}
 }

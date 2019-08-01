@@ -60,7 +60,7 @@
 			@include media-breakpoint-down(sm) {
 				&:hover {
 					.hamburger__bar {
-						background-color: $tertiary;
+						background-color: $secondary;
 					}
 				}
 			}

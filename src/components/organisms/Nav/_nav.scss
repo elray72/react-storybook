@@ -33,7 +33,7 @@
 		display: block;
 		height: em(4);
 		width: em(1);
-		background: $secondary;
+		background: $tertiary;
 		transition: 0.35s cubic-bezier(ease-out-back);
 		opacity: 0;
 
@@ -101,13 +101,13 @@
 				bottom: em(4, 36);
 				height: 4px;
 				width: 100%;
-				background-color: $tertiary;
+				background-color: $secondary;
 				transform: scaleY(1) scaleX(0);
 				transition: 0.25s ease-in-out;
 			}
 
 			&:hover {
-				color: $tertiary;
+				color: $secondary;
 				&:after {
 					transform: scaleY(1) scaleX(1);
 				}
