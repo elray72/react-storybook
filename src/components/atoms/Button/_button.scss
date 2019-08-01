@@ -1,0 +1,49 @@
+@import '../../../themes/v1/scss/common';
+
+.button {
+	color: $white;
+	font-family: $font-heading;
+	background: $primary;
+	margin: 0;
+	padding: em(16) em(20);
+	border: none;
+	cursor: pointer;
+	outline: none;
+	transition: 0.25s ease-in-out;
+	position: relative;
+	overflow: hidden;
+	border-radius: em(4);
+
+	&__ripple {
+		width: 1px;
+		height: 1px;
+		@include absolute(0, 0);
+		background: rgba(255, 255, 255, 0.2);
+		transform-origin: 50% 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		animation: ripple-effect 0.8s cubic-bezier(ease-in-out-quad);
+	}
+
+	&--primary {
+		background: $primary;
+	}
+
+	&--secondary {
+		background: $secondary;
+	}
+
+	&--tertiary {
+		background: $tertiary;
+	}
+}
+
+@keyframes ripple-effect{
+	0% {
+		opacity: 1;
+	}
+	100%{
+		transform: translate(-50%, -50%) scale(500, 500);
+		opacity: 0;
+	}
+}
