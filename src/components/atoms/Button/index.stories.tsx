@@ -11,7 +11,7 @@ import Button, { ButtonType } from './index';
 const StoryComponent = () => (
 	<Story>
 		<StoryContent>
-			<h1>Button</h1>
+			<h1>Buttons</h1>
 			<p>
 				You don't really need a description about what buttons are right? Tldr -
 				you click them and the app should do something.
@@ -30,19 +30,19 @@ const StoryComponent = () => (
 			<br />
 			<StoryItem label="Small">
 				<br />
-				<Button className="button" color="primary" size="sm">
+				<Button color="primary" size="sm">
 					Primary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Medium">
 				<br />
-				<Button className="button" color="secondary" size="md">
+				<Button color="secondary" size="md">
 					Secondary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Large">
 				<br />
-				<Button className="button" color="tertiary" size="lg">
+				<Button color="tertiary" size="lg">
 					Tertiary
 				</Button>
 			</StoryItem>
@@ -56,34 +56,19 @@ const StoryComponent = () => (
 			<br />
 			<StoryItem label="Small">
 				<br />
-				<Button
-					className="button"
-					color="primary"
-					size="sm"
-					type={ButtonType.Outline}
-				>
+				<Button color="primary" size="sm" type={ButtonType.Outline}>
 					Primary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Medium">
 				<br />
-				<Button
-					className="button"
-					color="secondary"
-					size="md"
-					type={ButtonType.Outline}
-				>
+				<Button color="secondary" size="md" type={ButtonType.Outline}>
 					Secondary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Large">
 				<br />
-				<Button
-					className="button"
-					color="tertiary"
-					size="lg"
-					type={ButtonType.Outline}
-				>
+				<Button color="tertiary" size="lg" type={ButtonType.Outline}>
 					Tertiary
 				</Button>
 			</StoryItem>
@@ -96,19 +81,19 @@ const StoryComponent = () => (
 			</p>
 			<StoryItem label="Small">
 				<br />
-				<Button className="button" color="primary" size="sm" type="text">
+				<Button color="primary" size="sm" type={ButtonType.Text}>
 					Primary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Medium">
 				<br />
-				<Button className="button" color="secondary" size="md" type="text">
+				<Button color="secondary" size="md" type={ButtonType.Text}>
 					Secondary
 				</Button>
 			</StoryItem>
 			<StoryItem label="Large">
 				<br />
-				<Button className="button" color="tertiary" size="lg" type="text">
+				<Button color="tertiary" size="lg" type={ButtonType.Text}>
 					Tertiary
 				</Button>
 			</StoryItem>

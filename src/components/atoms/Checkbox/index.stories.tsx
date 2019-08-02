@@ -1,68 +1,51 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Story, { StoryContent, StoryDemo, StoryItem, StoryLayout } from '../../templates/Story';
-import Button, { ButtonType } from './index';
+import Story, {
+	StoryContent,
+	StoryDemo,
+	StoryItem,
+	StoryLayout,
+} from '../../templates/Story';
+import Checkbox from './index';
 
 const StoryComponent = () => (
 	<Story>
 		<StoryContent>
-			<h1>Button</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et in, labore sapiente sint tenetur voluptate!</p>
-			<p><strong>To do:</strong> Buttons with icons, Icon buttons, button groups and floating buttons</p>
+			<h1>Checkboxes</h1>
+			<p>
+				This version of the checkboxes will be used outside of forms. A specific
+				version for forms is available in the forms section.
+			</p>
+			<p>
+				<strong>To do:</strong> Icon checkboxes, Label variations
+			</p>
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>Standard buttons</h2>
-			<p>High emphasis buttons primarily used for CTAs, where you want to prompt the user for action.</p>
+			<h2>Without labels</h2>
 			<br />
 			<StoryItem label="Small">
-				<br/><br/>
-				<Button className="button" color="primary" size="sm">Primary</Button>
+				<br />
+				<Checkbox color="primary" size="sm">
+					Primary
+				</Checkbox>
 			</StoryItem>
 			<StoryItem label="Medium">
-				<br/><br/>
-				<Button className="button" color="secondary" size="md">Secondary</Button>
+				<br />
+				<Checkbox color="primary" size="md">
+					Primary
+				</Checkbox>
 			</StoryItem>
 			<StoryItem label="Large">
-				<br/><br/>
-				<Button className="button" color="tertiary" size="lg">Tertiary</Button>
-			</StoryItem>
-		</StoryDemo>
-		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>Outline buttons</h2>
-			<p>Medium emphasis button where the action is secondary to the primary function of the app.</p>
-			<br />
-			<StoryItem label="Small">
-				<br/><br/>
-				<Button className="button" color="primary" size="sm" type={ButtonType.Outline}>Primary</Button>
-			</StoryItem>
-			<StoryItem label="Medium">
-				<br/><br/>
-				<Button className="button" color="secondary" size="md" type={ButtonType.Outline}>Secondary</Button>
-			</StoryItem>
-			<StoryItem label="Large">
-				<br/><br/>
-				<Button className="button" color="tertiary" size="lg" type={ButtonType.Outline}>Tertiary</Button>
-			</StoryItem>
-		</StoryDemo>
-		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>Text buttons</h2>
-			<p>Lower emphasis buttons where the action isn't super important or optional.</p>
-			<StoryItem label="Small">
-				<br/><br/>
-				<Button className="button" color="primary" size="sm" type="text">Primary</Button>
-			</StoryItem>
-			<StoryItem label="Medium">
-				<br/><br/>
-				<Button className="button" color="secondary" size="md" type="text">Secondary</Button>
-			</StoryItem>
-			<StoryItem label="Large">
-				<br/><br/>
-				<Button className="button" color="tertiary" size="lg" type="text">Tertiary</Button>
+				<br />
+				<Checkbox color="primary" size="lg">
+					Primary
+				</Checkbox>
 			</StoryItem>
 		</StoryDemo>
 	</Story>
 );
 
 // Component
-storiesOf('Components|Atoms/Button', module)
-	.add('Default', () => <StoryComponent />);
+storiesOf('Components|Atoms/Checkbox', module).add('Default', () => (
+	<StoryComponent />
+));

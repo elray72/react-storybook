@@ -2,54 +2,61 @@
 @import './checkbox-mixins';
 
 .checkbox {
-	//color: $white;
-	//background: $grey;
-	//font-size: em(14);
-	//font-family: $font-heading;
-	//margin: 0;
-	//padding: em(16) em(20);
-	//border: none;
-	//cursor: pointer;
-	//outline: none;
-	//transition: 0.25s ease-in-out;
-	//position: relative;
-	//overflow: hidden;
-	//border-radius: em(4);
-	//
-	//&__ripple {
-	//	width: 1px;
-	//	height: 1px;
-	//	@include absolute(0, 0);
-	//	background: rgba(255, 255, 255, 0.2);
-	//	transform-origin: 50% 50%;
-	//	transform: translate(-50%, -50%);
-	//	border-radius: 50%;
-	//	animation: ripple-effect 1s cubic-bezier(ease-in-out-quad);
-	//	z-index: 2;
-	//}
+	display: block;
+	height: 1.5em;
+	width: 1.5em;
+	padding: rem(1);
+	margin: 0;
+	border-radius: rem(2);
+	border: rem(3) solid $primary;
+	cursor: pointer;
+
+	&__check {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.25s ease-in-out;
+		opacity: 0;
+		path {
+			fill: $primary;
+		}
+	}
+
+	&__input {
+		display: none;
+		//position: absolute;
+		//height: 0;
+		//width: 0;
+
+		&:checked + {
+			.checkbox__check {
+				opacity: 1;
+			}
+		}
+	}
 
 	// SIZES
 	&--sm {
-		font-size: em(14);
-		padding: em(12) em(20);
+		font-size: 14px;
 	}
 	&--md {
-		font-size: em(14);
+		font-size: 16px;
 	}
 	&--lg {
-		font-size: em(16);
-		padding: em(16) em(20);
+		border: rem(4) solid $primary;
+		font-size: 24px;
 	}
 
 	// COLOURS - Creates standard, outline and text buttons
 	&--primary {
-		@include create-button($primary, $white);
+
 	}
 	&--secondary {
-		@include create-button($secondary, $white);
+
 	}
 	&--tertiary {
-		@include create-button($tertiary, $white, 12%);
+
 	}
 }
 

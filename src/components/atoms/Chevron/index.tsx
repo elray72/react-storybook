@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import './_chevron.scss';
-import { useEffect } from 'react';
 
 interface IProps {
 	animate?: boolean,
