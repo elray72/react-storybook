@@ -7,27 +7,31 @@ import Button from '../Button';
 const StoryComponent = () => (
 	<Story>
 		<StoryContent>
-			<h1>Button</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et in, labore sapiente sint tenetur voluptate!</p>
+			<h1>Badges</h1>
+			<p>Badges are used </p>
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
-			<br /><br />
+			<br/><br/>
 			<StoryItem label="Primary">
+				<br/>
 				<BadgeContainer value={9}>
 					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Secondary">
+				<br/>
 				<BadgeContainer value={99}>
 					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Tertiary">
+				<br/>
 				<BadgeContainer value={100} max={99}>
 					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Tertiary">
+				<br/>
 				<BadgeContainer value="New">
 					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>

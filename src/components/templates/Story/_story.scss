@@ -18,6 +18,10 @@
 		margin-bottom: rem(12);
 	}
 
+	p {
+		margin-bottom: em(16);
+	}
+
 	&__inner {
 		padding: em(24) em(32);
 	}
@@ -34,11 +38,17 @@
 
 		h1, h2, h3, h4, h5, h6 {
 			font-size: em(16);
-			margin: 0 0 em(16) em(8);
+			margin: 0 0 rem(16) rem(8);
 			//margin-bottom: em(16);
 			width: 100%;
 			position: relative;
 			//transform: translate(4px, -8px);
+		}
+
+		p {
+			width: 100%;
+			font-size: em(14);
+			margin: 0 0 rem(16) rem(8);
 		}
 
 		&--rows {
@@ -56,8 +66,6 @@
 				}
 
 				&-label {
-					font-weight: 600;
-					color: $green;
 					display: block;
 					text-align: center;
 				}
@@ -66,12 +74,14 @@
 	}
 
 	&__item {
-		//border: 1px solid blue;
 		padding: 0 1em;
 		display: flex;
 		align-items: center;
 		min-width: em(110);
+
 		&-label {
+			color: $grey-dark;
+			font-weight: 600;
 			font-family: $font-text;
 			font-size: em(12);
 		}

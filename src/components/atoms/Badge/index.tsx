@@ -10,8 +10,7 @@ interface IProps {
 	value?: string | number;
 }
 
-/* todo: button, icon, wrap an item
- */
+/* todo: button, icon, wrap an item */
 
 const BadgeContainer: React.FC<IProps> = (props) => {
 	const componentColor = props.color ? `badge--${props.color}` : null;
@@ -23,12 +22,6 @@ const BadgeContainer: React.FC<IProps> = (props) => {
 	if (typeof value === 'number' && typeof max !== 'undefined') {
 		value = value <= max ? value : `${max}+`;
 	}
-	// max = max ? max : value as number;
-	// if (value) {
-	// 	value = typeof value === 'number'
-	// 		? value <= max ? value : max
-	// 		: props.value;
-	// }
 
 	return (
 		<span className="badge-container">

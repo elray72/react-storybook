@@ -4,6 +4,7 @@
 .button {
 	color: $white;
 	background: $grey;
+	font-size: em(14);
 	font-family: $font-heading;
 	margin: 0;
 	padding: em(16) em(20);
@@ -36,6 +37,7 @@
 		font-size: em(14);
 	}
 	&--lg {
+		font-size: em(16);
 		padding: em(16) em(20);
 	}
 

@@ -22,22 +22,16 @@ export const Component: React.FC<IProps> = (props) => {
 
 	const showRipple = (e: React.MouseEvent) => {
 		const button = buttonRef.current;
-		//const xx = e.target as HTMLButtonElement;
-		const xx = document.querySelector('.button.button.button--secondary.button--md') as HTMLButtonElement;
-console.log(e.target);
 		if (button) {
-
-			//console.log()
-
-			console.log('target:', xx.offsetTop, xx.offsetLeft);
-			// console.log('button:', this.clientWidth, this.offsetLeft);
-			//console.log('mouse:', e.clientY, e.clientX);
-
 			const ripple = document.createElement('div');
 			ripple.classList.add('button__ripple');
-			ripple.style.top = `${e.clientY - button.offsetTop}px`;
-			ripple.style.left = `${e.clientX - button.offsetLeft}px`;
+			ripple.style.top = `${e.clientY - button.offsetTop + window.pageYOffset}px`;
+			ripple.style.left = `${e.clientX - button.offsetLeft + window.pageXOffset}px`;
 			button.appendChild(ripple);
+
+			console.log('mouse:', e.clientY, e.clientX);
+			console.log('button:', button.offsetTop, button.offsetLeft);
+			console.log('ripple:', e.clientY - button.offsetTop, e.clientX - button.offsetLeft);
 
 			setTimeout(()=>{ripple.remove()},10000);
 		}
@@ -49,10 +43,6 @@ console.log(e.target);
 			props.onClick();
 		}
 	};
-
-	function handleClick2() {
-
-	}
 
 	const type = props.type ? `-${props.type}` : '';
 	const componentClass = classNames(
