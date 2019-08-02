@@ -14,22 +14,22 @@ const StoryComponent = () => (
 			<br /><br />
 			<StoryItem label="Primary">
 				<BadgeContainer value={9}>
-					<Button className="button" theme="primary">Primary</Button>
+					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Secondary">
 				<BadgeContainer value={99}>
-					<Button className="button" theme="primary">Primary</Button>
+					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Tertiary">
 				<BadgeContainer value={100} max={99}>
-					<Button className="button" theme="primary">Primary</Button>
+					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 			<StoryItem label="Tertiary">
 				<BadgeContainer value="New">
-					<Button className="button" theme="primary">Primary</Button>
+					<Button className="button" color="primary">Primary</Button>
 				</BadgeContainer>
 			</StoryItem>
 		</StoryDemo>

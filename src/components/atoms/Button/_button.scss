@@ -1,9 +1,10 @@
 @import '../../../themes/v1/scss/common';
+@import './button-mixins';
 
 .button {
 	color: $white;
+	background: $grey;
 	font-family: $font-heading;
-	background: $primary;
 	margin: 0;
 	padding: em(16) em(20);
 	border: none;
@@ -22,27 +23,43 @@
 		transform-origin: 50% 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
-		animation: ripple-effect 0.8s cubic-bezier(ease-in-out-quad);
+		animation: ripple-effect 1s cubic-bezier(ease-in-out-quad);
+		z-index: 2;
 	}
 
+	// SIZES
+	&--sm {
+		font-size: em(14);
+		padding: em(12) em(20);
+	}
+	&--md {
+		font-size: em(14);
+	}
+	&--lg {
+		padding: em(16) em(20);
+	}
+
+	// COLOURS
 	&--primary {
-		background: $primary;
+		@include create-button($primary, $white);
 	}
-
 	&--secondary {
-		background: $tertiary;
+		@include create-button($secondary, $white);
+	}
+	&--tertiary {
+		@include create-button($tertiary, $white, 12%);
 	}
 
-	&--tertiary {
-		background: $secondary;
+	&--primary-outline {
+
 	}
 }
 
-@keyframes ripple-effect{
+@keyframes ripple-effect {
 	0% {
 		opacity: 1;
 	}
-	100%{
+	100% {
 		transform: translate(-50%, -50%) scale(500, 500);
 		opacity: 0;
 	}

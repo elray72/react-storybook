@@ -1,0 +1,59 @@
+@import '../../../themes/v1/scss/common';
+
+@mixin standard-button($background, $color: $white, $darken: 8%) {
+	color: $color;
+	background: $background;
+	&:hover {
+		background: darken($background, $darken);
+	}
+}
+
+@mixin text-button($background, $color: $white, $darken: 8%) {
+	color: $background;
+	background: transparent;
+	&:hover {
+		color: darken($background, $darken);
+	}
+}
+
+@mixin outline-button($background, $color: $white, $darken: 8%) {
+	color: $background;
+	background: transparent;
+	border: 2px solid $background;
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: $background;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: 0.25s ease-in-out;
+	}
+
+	&:hover {
+		&:before {
+			opacity: 0.1;
+		}
+	}
+
+	.button__ripple {
+		opacity: 0;
+		background: rgba($background, 0.3);
+	}
+}
+
+@mixin create-button($background, $color: $white, $darken: 8%) {
+
+	@include standard-button($background, $color, $darken);
+
+	&-outline {
+		@include outline-button($background, $color, $darken);
+	}
+
+	&-text {
+		@include text-button($background, $color, $darken);
+	}
+}

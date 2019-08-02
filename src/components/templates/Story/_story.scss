@@ -30,7 +30,16 @@
 	&__demo {
 		background: $grey-pale;
 		border-radius: em(4);
-		padding: em(24) em(16);
+		padding: em(24) em(16);margin-bottom: em(24);
+
+		h1, h2, h3, h4, h5, h6 {
+			font-size: em(16);
+			margin: 0 0 em(16) em(8);
+			//margin-bottom: em(16);
+			width: 100%;
+			position: relative;
+			//transform: translate(4px, -8px);
+		}
 
 		&--rows {
 			display: flex;
@@ -41,6 +50,10 @@
 				margin: 0 em(16) em(16);
 				display: flex;
 				flex-direction: column-reverse;
+				flex-grow: 1;
+				@include media-breakpoint-up(sm) {
+					flex-grow: 0;
+				}
 
 				&-label {
 					font-weight: 600;
@@ -53,7 +66,11 @@
 	}
 
 	&__item {
+		//border: 1px solid blue;
 		padding: 0 1em;
+		display: flex;
+		align-items: center;
+		min-width: em(110);
 		&-label {
 			font-family: $font-text;
 			font-size: em(12);

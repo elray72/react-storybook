@@ -17,7 +17,7 @@ interface IStoryItem {
 }
 
 export const StoryLayout = {
-	Rows: 'rows',
+	Rows: 'rows'
 };
 
 export const StoryContent: React.FC<IProps> = (props) => {
