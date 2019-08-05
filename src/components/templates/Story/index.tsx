@@ -13,7 +13,7 @@ interface IStoryDemo {
 
 interface IStoryItem {
 	children: ReactNode;
-	label: string;
+	label?: string;
 }
 
 export const StoryLayout = {

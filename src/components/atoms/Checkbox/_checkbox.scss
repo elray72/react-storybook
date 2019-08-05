@@ -2,7 +2,7 @@
 @import './checkbox-mixins';
 
 .checkbox {
-	display: block;
+	display: inline-flex;
 	height: 1.5em;
 	width: 1.5em;
 	padding: rem(1);
@@ -25,9 +25,6 @@
 
 	&__input {
 		display: none;
-		//position: absolute;
-		//height: 0;
-		//width: 0;
 
 		&:checked + {
 			.checkbox__check {
@@ -37,15 +34,19 @@
 	}
 
 	// SIZES
+	&--in {
+		margin: 0 0.3em;
+		font-size: 0.875em;
+	}
 	&--sm {
-		font-size: 14px;
+		font-size: rem(14);
 	}
 	&--md {
-		font-size: 16px;
+		font-size: rem(16);
 	}
 	&--lg {
 		border: rem(4) solid $primary;
-		font-size: 24px;
+		font-size: em(20);
 	}
 
 	// COLOURS - Creates standard, outline and text buttons

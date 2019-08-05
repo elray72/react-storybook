@@ -21,26 +21,35 @@ const StoryComponent = () => (
 			</p>
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>Without labels</h2>
+			<h2>Inline checkboxes</h2>
 			<br />
-			<StoryItem label="Small">
-				<br />
-				<Checkbox color="primary" size="sm">
-					Primary
-				</Checkbox>
+			<StoryItem>
+				<div>
+					This is an inline checkbox <Checkbox color="primary" size="in" />
+				</div>
 			</StoryItem>
-			<StoryItem label="Medium">
-				<br />
-				<Checkbox color="primary" size="md">
-					Primary
-				</Checkbox>
+			<StoryItem>
+				<div>
+					This is medium inline checkbox <Checkbox color="secondary" size="md" />
+				</div>
 			</StoryItem>
-			<StoryItem label="Large">
-				<br />
-				<Checkbox color="primary" size="lg">
-					Primary
-				</Checkbox>
+			<StoryItem>
+				<div>
+					This is large inline checkbox <Checkbox color="secondary" size="lg" />
+				</div>
 			</StoryItem>
+			{/*<StoryItem label="Medium">*/}
+			{/*<br />*/}
+			{/*<Checkbox color="primary" size="md">*/}
+			{/*Primary*/}
+			{/*</Checkbox>*/}
+			{/*</StoryItem>*/}
+			{/*<StoryItem label="Large">*/}
+			{/*<br />*/}
+			{/*<Checkbox color="primary" size="lg">*/}
+			{/*Primary*/}
+			{/*</Checkbox>*/}
+			{/*</StoryItem>*/}
 		</StoryDemo>
 	</Story>
 );
