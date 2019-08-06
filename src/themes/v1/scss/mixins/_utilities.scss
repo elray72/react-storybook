@@ -17,7 +17,7 @@
 	left: $left;
 }
 
-@mixin absolute($top, $right: $top, $bottom: $top, $left: $right) {
+@mixin position-absolute($top, $right: $top, $bottom: $top, $left: $right) {
 	position: absolute;
 	@include position($top, $right, $bottom, $left);
 }

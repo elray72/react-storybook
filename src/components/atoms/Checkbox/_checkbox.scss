@@ -3,13 +3,36 @@
 
 .checkbox {
 	display: inline-flex;
-	height: 1.5em;
-	width: 1.5em;
-	padding: rem(1);
-	margin: 0;
-	border-radius: rem(2);
-	border: rem(3) solid $primary;
+	padding: 0;
+	margin: 0 0.25em 0 0;
 	cursor: pointer;
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&__input {
+		display: none;
+
+		&:checked ~ {
+			.checkbox__box {
+				.checkbox__check {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__box {
+		font-size: 0.875em;
+		padding: rem(1);
+		height: 1.5em;
+		width: 1.5em;
+		display: inline-flex;
+		border: rem(3) solid $primary;
+		border-radius: rem(2);
+		order: 1;
+		position: relative;
+	}
 
 	&__check {
 		display: block;
@@ -23,41 +46,51 @@
 		}
 	}
 
-	&__input {
-		display: none;
+	&__label {
+		margin-left: 0.5em;
+		order: 2;
 
-		&:checked + {
-			.checkbox__check {
-				opacity: 1;
-			}
+		&--left {
+			margin: 0 0.5em 0 0;
+			order: 0;
 		}
 	}
 
 	// SIZES
 	&--in {
-		margin: 0 0.3em;
-		font-size: 0.875em;
+
 	}
 	&--sm {
-		font-size: rem(14);
+		.checkbox__box {
+			font-size: rem(14);
+		}
 	}
 	&--md {
-		font-size: rem(16);
+		.checkbox__box {
+			font-size: rem(16);
+		}
 	}
 	&--lg {
-		border: rem(4) solid $primary;
-		font-size: em(20);
+		.checkbox__box {
+			font-size: em(20);
+		}
 	}
 
 	// COLOURS - Creates standard, outline and text buttons
 	&--primary {
-
+		@include create-checkbox($primary);
 	}
 	&--secondary {
-
+		@include create-checkbox($secondary);
 	}
 	&--tertiary {
-
+		@include create-checkbox($tertiary);
+	}
+	&--green {
+		@include create-checkbox($green);
+	}
+	&--red {
+		@include create-checkbox($red);
 	}
 }
 

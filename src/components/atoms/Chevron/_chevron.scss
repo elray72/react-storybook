@@ -25,7 +25,7 @@ $right-color: $off-black;
 	}
 
 	svg {
-		@include absolute(0, 0);
+		@include position-absolute(0, 0);
 		margin: auto;
 	}
 

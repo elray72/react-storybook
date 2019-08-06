@@ -8,11 +8,12 @@ interface IProps {
 	className?: string;
 	color?: string;
 	id?: string;
+	label?: string;
+	labelPosition?: string;
 	onClick?: Function;
 	size?: string;
 	type?: string;
 }
-
 
 export const Component: React.FC<IProps> = (props) => {
 
@@ -21,6 +22,10 @@ export const Component: React.FC<IProps> = (props) => {
 			props.onClick();
 		}
 	};
+
+	const labelClass = classNames('checkbox__label', `checkbox__label--${props.labelPosition}`);
+	const label = !props.label ? ''
+		: <span className={labelClass}>{props.label}</span>;
 
 	const type = props.type ? `-${props.type}` : '';
 	const componentClass = classNames(
@@ -32,7 +37,10 @@ export const Component: React.FC<IProps> = (props) => {
 	return (
 		<label className={componentClass} htmlFor={props.id} onClick={handleClick}>
 			<input className="checkbox__input" id={props.id} type="checkbox" />
-			<Svg className="checkbox__check" src={checkSvg} />
+			<span className="checkbox__box">
+				<Svg className="checkbox__check" src={checkSvg} />
+			</span>
+			{label}
 		</label>
 	);
 };

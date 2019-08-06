@@ -5,7 +5,7 @@
 	display: flex;
 	color: $white;
 	background: $red;
-	@include absolute(0, 0, auto, auto);
+	@include position-absolute(0, 0, auto, auto);
 	height: rem(20);
 	padding: 0 rem(6);
 	z-index: 1;

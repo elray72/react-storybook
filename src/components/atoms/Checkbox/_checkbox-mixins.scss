@@ -1,74 +1,32 @@
 @import '../../../themes/v1/scss/common';
 
-@mixin psuedo-bg($background, $darken) {
-	&:before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		background: $background;
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		transition: 0.25s ease-in-out;
-	}
+@mixin create-checkbox($color) {
+	.checkbox {
+		&__box {
+			border: rem(3) solid $color;
+		}
 
-	&:hover {
-		color: darken($background, $darken);
-		background: transparent;
-		&:before {
-			opacity: 0.1;
+		&__check {
+			path {
+				fill: $color;
+			}
 		}
 	}
-}
 
-@mixin standard-button($background, $color: $white, $darken: 8%) {
-	color: $color;
-	background: $background;
-	&:hover {
-		background: darken($background, $darken);
-	}
-}
-
-@mixin outline-button($background, $color: $white, $darken: 8%) {
-	color: $background;
-	background: transparent;
-	border: 2px solid $background;
-	@include psuedo-bg($background, $darken);
-
-	&:hover {
-		border-color: darken($background, $darken);
-	}
-
-	.button__ripple {
+	.checkbox__box:before {
+		display: block;
+		content: '';
+		height: 100%;
+		width: 100%;
+		@include position-absolute(0, 0);
+		background-color: $color;
 		opacity: 0;
 		transition: 0.25s ease-in-out;
-		background: rgba($background, 0.2);
-	}
-}
-
-@mixin text-button($background, $color: $white, $darken: 8%) {
-	color: $background;
-	background: transparent;
-	@include psuedo-bg($background, $darken);
-
-	.button__ripple {
-		opacity: 0;
-		transition: 0.25s ease-in-out;
-		background: rgba($background, 0.2);
-	}
-}
-
-@mixin create-button($background, $color: $white, $darken: 8%) {
-
-	@include standard-button($background, $color, $darken);
-
-	&-outline {
-		@include outline-button($background, $color, $darken);
 	}
 
-	&-text {
-		@include text-button($background, $color, $darken);
+	&:hover {
+		.checkbox__box:before {
+			opacity: 0.1;
+		}
 	}
 }

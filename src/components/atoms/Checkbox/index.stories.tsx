@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import styled from 'styled-components';
 import Story, {
 	StoryContent,
 	StoryDemo,
@@ -7,6 +8,13 @@ import Story, {
 	StoryLayout,
 } from '../../templates/Story';
 import Checkbox from './index';
+
+const Ul = styled.ul`
+	list-style-type: none;
+	li {
+		margin-bottom: 1em;
+	}
+`;
 
 const StoryComponent = () => (
 	<Story>
@@ -21,35 +29,63 @@ const StoryComponent = () => (
 			</p>
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
+			<h2>Without labels</h2>
+			<StoryItem label="Small 21">
+				<br />
+				<Checkbox color="primary" size="sm" />
+			</StoryItem>
+			<StoryItem label="Medium 24">
+				<br />
+				<Checkbox color="secondary" size="md" />
+			</StoryItem>
+			<StoryItem label="Large 30">
+				<br />
+				<Checkbox color="tertiary" size="lg" />
+			</StoryItem>
+		</StoryDemo>
+		<StoryDemo layout={StoryLayout.Rows}>
+			<h2>With labels</h2>
+			<StoryItem label="Small">
+				<br />
+				<Checkbox color="tertiary" size="sm" />
+			</StoryItem>
+			<StoryItem label="Medium">
+				<br />
+				<Checkbox color="secondary" size="md" />
+			</StoryItem>
+			<StoryItem label="Large">
+				<br />
+				<Checkbox color="primary" size="lg" />
+			</StoryItem>
+		</StoryDemo>
+		<StoryDemo layout={StoryLayout.Rows}>
 			<h2>Inline checkboxes</h2>
 			<br />
 			<StoryItem>
-				<div>
-					This is an inline checkbox <Checkbox color="primary" size="in" />
-				</div>
+				<Ul>
+					<li>
+						<Checkbox color="red" />
+						&nbsp;This is an inline checkbox in red
+					</li>
+					<li>
+						This is an inline checkbox in green &nbsp;
+						<Checkbox color="green" />
+					</li>
+					<li>
+						<Checkbox
+							color="red"
+							label="This is an inline checkbox with the text label on the right (default)"
+						/>
+					</li>
+					<li>
+						<Checkbox
+							color="green"
+							label="This is an inline checkbox with the text label on the left"
+							labelPosition="left"
+						/>
+					</li>
+				</Ul>
 			</StoryItem>
-			<StoryItem>
-				<div>
-					This is medium inline checkbox <Checkbox color="secondary" size="md" />
-				</div>
-			</StoryItem>
-			<StoryItem>
-				<div>
-					This is large inline checkbox <Checkbox color="secondary" size="lg" />
-				</div>
-			</StoryItem>
-			{/*<StoryItem label="Medium">*/}
-			{/*<br />*/}
-			{/*<Checkbox color="primary" size="md">*/}
-			{/*Primary*/}
-			{/*</Checkbox>*/}
-			{/*</StoryItem>*/}
-			{/*<StoryItem label="Large">*/}
-			{/*<br />*/}
-			{/*<Checkbox color="primary" size="lg">*/}
-			{/*Primary*/}
-			{/*</Checkbox>*/}
-			{/*</StoryItem>*/}
 		</StoryDemo>
 	</Story>
 );
