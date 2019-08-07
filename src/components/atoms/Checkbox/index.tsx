@@ -2,7 +2,7 @@ import * as React from 'react';
 import Svg from 'react-inlinesvg';
 import classNames from 'classnames';
 import './_checkbox.scss';
-import checkSvg from '../../../../public/assets/icons/check.svg';
+import checkSvg from '../Icon/svg/check.svg';
 
 interface IProps {
 	className?: string;
