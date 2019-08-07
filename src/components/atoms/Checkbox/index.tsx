@@ -23,9 +23,8 @@ export const Component: React.FC<IProps> = (props) => {
 		}
 	};
 
-	const labelClass = classNames('checkbox__label', `checkbox__label--${props.labelPosition}`);
-	const label = !props.label ? ''
-		: <span className={labelClass}>{props.label}</span>;
+	const label = props.label ? <span className="checkbox__label">{props.label}</span> : null;
+	const labelPosition = label ? `checkbox--label-${props.labelPosition}` : null;
 
 	const type = props.type ? `-${props.type}` : '';
 	const componentClass = classNames(
@@ -33,6 +32,7 @@ export const Component: React.FC<IProps> = (props) => {
 		'checkbox',
 		props.color ? `checkbox--${props.color}${type}` : null,
 		props.size ? `checkbox--${props.size}` : null,
+		labelPosition
 	);
 	return (
 		<label className={componentClass} htmlFor={props.id} onClick={handleClick}>

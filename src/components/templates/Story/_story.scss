@@ -1,35 +1,6 @@
-@import '../../../themes/v1/scss/common';
+@import '../../../themes/light/common';
 
 .story {
-	h1 {
-		width: auto;
-		font-size: em(32);
-		margin-right: auto;
-		margin-bottom: em(24, 32);
-		display: inline-block;
-		border-bottom: 3px solid $secondary;
-		padding-bottom: em(2);
-	}
-
-	br {
-		content: '';
-		display: block;
-		width: 100%;
-		margin-bottom: rem(12);
-	}
-
-	p {
-		margin-bottom: em(16);
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	li {
-		margin-bottom: 0.5em;
-	}
 
 	&__inner {
 		padding: em(24) em(32);
@@ -48,16 +19,18 @@
 		h1, h2, h3, h4, h5, h6 {
 			font-size: em(16);
 			margin: 0 0 rem(16) rem(8);
-			//margin-bottom: em(16);
 			width: 100%;
 			position: relative;
-			//transform: translate(4px, -8px);
 		}
 
 		p {
 			width: 100%;
 			font-size: em(14);
 			margin: 0 0 rem(16) rem(8);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		&--rows {
@@ -94,5 +67,91 @@
 			font-family: $font-text;
 			font-size: em(12);
 		}
+	}
+
+	&__code {
+		border-radius: em(4);
+		background: $off-black;
+		width: 100%;
+		margin: 1.5em 0 2em;
+		color: $white;
+		padding: em(24);
+
+		code {
+			font-size: em(15);
+			font-family: $font-code, Consolas, monospace;
+			white-space: pre;
+			word-spacing: normal;
+			word-break: normal;
+			word-wrap: normal;
+			hyphens: none;
+			tab-size: 4;
+
+			em {
+				font-style: normal;
+			}
+
+			.keyword {
+				color: #66d9ef;
+			}
+
+			.string {
+				color: #a6e22e;
+			}
+
+			.object {
+				color: #fc929e;
+			}
+
+			.tag {
+				color: #fff170;
+			}
+		}
+	}
+}
+
+// ELEMENTS
+.story {
+	h1 {
+		font-size: em(32);
+		width: auto;
+		margin-right: auto;
+		margin-bottom: 0.75em;
+		display: inline-block;
+		border-bottom: rem(3) solid $secondary;
+		padding-bottom: 0.125em;
+	}
+
+	br {
+		content: '';
+		display: block;
+		width: 100%;
+		margin-bottom: rem(12);
+	}
+
+	hr {
+		margin: em(32) 0;
+	}
+
+	p {
+		margin-bottom: em(16);
+
+		code {
+			font-family: $font-code;
+			font-size: em(15);
+			background-color: $grey-light;
+			display: inline-block;
+			padding: rem(2) rem(4) 0;
+			border-radius: rem(4);
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 0.5em;
 	}
 }

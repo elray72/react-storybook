@@ -1,48 +1,47 @@
 import * as React from 'react';
+import Svg from 'react-inlinesvg';
 import classNames from 'classnames';
 import './_icon.scss';
+import checkSvg from '../../../../public/assets/icons/check.svg';
 
 interface IProps {
-	children?: React.ReactNode,
 	className?: string;
+	color?: string;
+	id?: string;
+	label?: string;
+	labelPosition?: string;
 	onClick?: Function;
 	size?: string;
-	theme?: string;
+	type?: string;
 }
 
 export const Component: React.FC<IProps> = (props) => {
-	const buttonRef = React.useRef<HTMLButtonElement>(null);
 
-	const showRipple = (e: React.MouseEvent) => {
-		const button = buttonRef.current;
-
-		if (button) {
-			const ripple = document.createElement('div');
-			ripple.classList.add('button__ripple');
-			ripple.style.top = `${e.clientY - button.offsetTop}px`;
-			ripple.style.left = `${e.clientX - button.offsetLeft}px`;
-			button.appendChild(ripple);
-
-			setTimeout(()=>{ripple.remove()},1000);
-		}
-	};
-
-	const handleClick = (e: React.MouseEvent) => {
-		showRipple(e);
+	const handleClick = () => {
 		if (props.onClick) {
 			props.onClick();
 		}
 	};
 
+	const label = props.label ? <span className="checkbox__label">{props.label}</span> : null;
+	const labelPosition = label ? `checkbox--label-${props.labelPosition}` : null;
+
+	const type = props.type ? `-${props.type}` : '';
 	const componentClass = classNames(
 		props.className,
-		'button',
-		props.theme ? `button--${props.theme}` : null,
+		'checkbox',
+		props.color ? `checkbox--${props.color}${type}` : null,
+		props.size ? `checkbox--${props.size}` : null,
+		labelPosition
 	);
 	return (
-		<button className={componentClass} ref={buttonRef} onClick={handleClick}>
-			{props.children}
-		</button>
+		<label className={componentClass} htmlFor={props.id} onClick={handleClick}>
+			<input className="checkbox__input" id={props.id} type="checkbox" />
+			<span className="checkbox__box">
+				<Svg className="checkbox__check" src={checkSvg} />
+			</span>
+			{label}
+		</label>
 	);
 };
 

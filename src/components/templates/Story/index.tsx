@@ -17,11 +17,19 @@ interface IStoryItem {
 }
 
 export const StoryLayout = {
-	Rows: 'rows'
+	Rows: 'rows',
 };
 
 export const StoryContent: React.FC<IProps> = (props) => {
 	return <div className="story__content">{props.children}</div>;
+};
+
+export const StoryCode: React.FC<IProps> = (props) => {
+	return (
+		<pre className="story__code">
+			<code>{props.children}</code>
+		</pre>
+	);
 };
 
 export const StoryDemo: React.FC<IStoryDemo> = (props) => {

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import { Link,  Route, Switch } from 'react-router-dom';
 import 'sanitize.css';
-import '../themes/v1/scss/style.scss';
+import '../themes/light/scss/style.scss';
 
 import Header from './organisms/Header';
 import Nav from './organisms/Nav';

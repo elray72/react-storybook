@@ -8,7 +8,6 @@ interface IProps {
 
 const Page: React.FC<IProps> = (props) => {
 	const componentClass = classNames(props.className, 'page');
-
 	return <div className={componentClass}>{props.children}</div>;
 };
 

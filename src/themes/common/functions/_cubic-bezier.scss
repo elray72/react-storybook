@@ -34,3 +34,7 @@ $cubic-bezier-presets: (
 	ease-in-out-back:		cubic-bezier(0.680, -0.550, 0.265, 1.550),
 
 ) !default;
+
+@function cubic-bezier($context) {
+	@return map-get($cubic-bezier-presets, $context);
+}

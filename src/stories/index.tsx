@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { configure, addDecorator  } from '@storybook/react';
 import configureStore from '../store/configureStore';
 import 'sanitize.css';
-import '../themes/v1/scss/style.scss';
+import '../themes/light/style.scss';
 
 const foundation = require.context('./', true, /\.stories\.tsx$/);
 const core = require.context('./core', true, /\.stories\.tsx$/);

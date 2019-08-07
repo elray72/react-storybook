@@ -1,4 +1,4 @@
-@import '../../../themes/v1/scss/common';
+@import '../../../themes/light/common';
 @import './checkbox-mixins';
 
 .checkbox {
@@ -32,6 +32,7 @@
 		border-radius: rem(2);
 		order: 1;
 		position: relative;
+		flex-shrink: 0;
 	}
 
 	&__check {
@@ -49,11 +50,6 @@
 	&__label {
 		margin-left: 0.5em;
 		order: 2;
-
-		&--left {
-			margin: 0 0.5em 0 0;
-			order: 0;
-		}
 	}
 
 	// SIZES
@@ -73,6 +69,33 @@
 	&--lg {
 		.checkbox__box {
 			font-size: em(20);
+		}
+	}
+
+	// LABEL POSITIONS
+	&--label {
+		&-top {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			.checkbox__label {
+				margin: 0 0 0.5em 0;
+				order: 0;
+			}
+		}
+		&-bottom {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			.checkbox__label {
+				margin: 0.5em 0 0 0;
+			}
+		}
+		&-left {
+			.checkbox__label {
+				margin: 0 0.5em 0 0;
+				order: 0;
+			}
 		}
 	}
 

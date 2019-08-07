@@ -30,24 +30,9 @@ const StoryComponent = () => (
 		</StoryContent>
 		<StoryDemo layout={StoryLayout.Rows}>
 			<h2>Without labels</h2>
-			<StoryItem label="Small 21">
-				<br />
-				<Checkbox color="primary" size="sm" />
-			</StoryItem>
-			<StoryItem label="Medium 24">
-				<br />
-				<Checkbox color="secondary" size="md" />
-			</StoryItem>
-			<StoryItem label="Large 30">
-				<br />
-				<Checkbox color="tertiary" size="lg" />
-			</StoryItem>
-		</StoryDemo>
-		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>With labels</h2>
 			<StoryItem label="Small">
 				<br />
-				<Checkbox color="tertiary" size="sm" />
+				<Checkbox color="primary" size="sm" />
 			</StoryItem>
 			<StoryItem label="Medium">
 				<br />
@@ -55,7 +40,51 @@ const StoryComponent = () => (
 			</StoryItem>
 			<StoryItem label="Large">
 				<br />
-				<Checkbox color="primary" size="lg" />
+				<Checkbox color="tertiary" size="lg" />
+			</StoryItem>
+		</StoryDemo>
+		<StoryDemo layout={StoryLayout.Rows}>
+			<h2>With labels</h2>
+			<br />
+			<StoryItem label="Small">
+				<br />
+				<br />
+				<Checkbox
+					color="primary"
+					size="sm"
+					label="Top label"
+					labelPosition="top"
+				/>
+			</StoryItem>
+			<StoryItem label="Medium">
+				<br />
+				<br />
+				<Checkbox
+					color="secondary"
+					size="md"
+					label="Right label"
+					labelPosition="right"
+				/>
+			</StoryItem>
+			<StoryItem label="Large">
+				<br />
+				<br />
+				<Checkbox
+					color="tertiary"
+					size="lg"
+					label="Bottom label"
+					labelPosition="bottom"
+				/>
+			</StoryItem>
+			<StoryItem label="Small">
+				<br />
+				<br />
+				<Checkbox
+					color="primary"
+					size="sm"
+					label="Left label"
+					labelPosition="left"
+				/>
 			</StoryItem>
 		</StoryDemo>
 		<StoryDemo layout={StoryLayout.Rows}>
