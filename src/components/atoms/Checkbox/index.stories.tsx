@@ -120,6 +120,6 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Checkbox', module).add('Default', () => (
+storiesOf('Components|Atoms/Checkboxes', module).add('Default', () => (
 	<StoryComponent />
 ));

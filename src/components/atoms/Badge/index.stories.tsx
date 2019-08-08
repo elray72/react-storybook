@@ -41,5 +41,5 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Badge', module)
+storiesOf('Components|Atoms/Badges', module)
 	.add('Default', () => <StoryComponent />);

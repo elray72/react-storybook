@@ -102,6 +102,6 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Button', module).add('Default', () => (
+storiesOf('Components|Atoms/Buttons', module).add('Default', () => (
 	<StoryComponent />
 ));

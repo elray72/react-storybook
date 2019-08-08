@@ -10,5 +10,5 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Tag', module)
+storiesOf('Components|Atoms/Tags', module)
 	.add('Default', () => <StoryComponent />);

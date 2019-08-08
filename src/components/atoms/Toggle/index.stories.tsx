@@ -10,5 +10,5 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Toggle', module)
+storiesOf('Components|Atoms/Toggles', module)
 	.add('Default', () => <StoryComponent />);

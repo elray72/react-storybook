@@ -45,6 +45,6 @@ const StoryComponent = () => (
 );
 
 // Component
-storiesOf('Components|Atoms/Icon', module).add('Default', () => (
+storiesOf('Components|Atoms/Icons', module).add('Default', () => (
 	<StoryComponent />
 ));
