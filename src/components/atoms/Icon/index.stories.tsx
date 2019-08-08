@@ -27,6 +27,9 @@ const StoryComponent = () => (
 				More information including a complete list of icons is available on the
 				iconography page.
 			</p>
+			<p>
+				To do: As a button, within a button.
+			</p>
 		</StoryContent>
 		<StoryCode>
 			<code>
@@ -36,9 +39,19 @@ const StoryComponent = () => (
 			</code>
 		</StoryCode>
 		<StoryDemo layout={StoryLayout.Rows}>
-			<h2>Without labels</h2>
-			<StoryItem label="Small">
-				<AddressBook />
+			<h2>Basic usage</h2>
+			<br />
+			<StoryItem label="Size = 32">
+				<br />
+				<AddressBook size={32} />
+			</StoryItem>
+			<StoryItem label="Size = 40">
+				<br />
+				<AddressBook size={40} />
+			</StoryItem>
+			<StoryItem label="Size = 48">
+				<br />
+				<AddressBook size={48} />
 			</StoryItem>
 		</StoryDemo>
 	</Story>

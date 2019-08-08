@@ -2,13 +2,13 @@
 // Variables - Global
 // ================================================================================================================== */
 
-// Base
+// Base (use pixels)
 // ---------------------------------------------------------------------------------------------------------------------
 $base-font-size:		16px;
 $page-max-width:		1200px;
 
 
-// Layout
+// Layout (use pixels)
 // ---------------------------------------------------------------------------------------------------------------------
 $header-height-m:		64px;
 $max-height-mobile:		823px; // max height for tallest known mainstream device, Pixel XL
@@ -76,6 +76,6 @@ $screen-xl:				map-get($grid-breakpoints, xl);
 // Grid
 // ---------------------------------------------------------------------------------------------------------------------
 $grid-columns:				12;
-$grid-gutter-width:			30px;
+$grid-gutter-width:			rem(30);
 $grid-float-breakpoint:		$screen-md;						// nav expand
 $grid-float-breakpoint-max:	($grid-float-breakpoint - 1);	// nav collapse

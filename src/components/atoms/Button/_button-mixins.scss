@@ -60,15 +60,16 @@
 	}
 }
 
-@mixin create-button($background, $color: $white, $darken: 8%) {
+@mixin button-color($prefix, $background, $color: $white, $darken: 8%) {
+	&--#{$prefix} {
+		@include standard-button($background, $color, $darken);
 
-	@include standard-button($background, $color, $darken);
+		&-outline {
+			@include outline-button($background, $color, $darken);
+		}
 
-	&-outline {
-		@include outline-button($background, $color, $darken);
-	}
-
-	&-text {
-		@include text-button($background, $color, $darken);
+		&-text {
+			@include text-button($background, $color, $darken);
+		}
 	}
 }

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import Svg from 'react-inlinesvg';
 import classNames from 'classnames';
+import styled, { css } from 'styled-components';
+import { rem } from '../../../common/css-helpers';
 import './_icon.scss';
-import checkSvg from './svg/check.svg';
 
 interface IProps {
 	className?: string;
 	color?: string;
-	size?: string;
+	size?: number;
 	src: any,
 }
 
@@ -15,15 +16,21 @@ interface IProps {
 export interface IIcon {
 	className?: string;
 	color?: string;
-	size?: string;
+	size?: number;
 }
+
+const Span = styled.span<IProps>`
+	${p => p.size && css`
+		font-size: ${rem(p.size)};
+	`}
+`;
 
 export const Icon: React.FC<IProps> = (props) => {
 	const componentClass = classNames(props.className, 'icon');
 	return (
-		<span className={componentClass}>
-			<Svg className="icon__svg" src={checkSvg} />
-		</span>
+		<Span className={componentClass} {...props}>
+			<Svg className="icon__svg" src={props.src} />
+		</Span>
 	);
 };
 

@@ -1,18 +1,14 @@
 @import '../../../themes/light/common';
 
 .icon {
-	color: $white;
-	font-family: $font-heading;
-	background: $primary;
-	margin: 0;
-	padding: em(16) em(20);
-	border: none;
-	cursor: pointer;
-	outline: none;
-	transition: 0.25s ease-in-out;
-	position: relative;
-	overflow: hidden;
-	border-radius: em(4);
+	display: inline-flex;
+	height: 1em;
+	width: auto;
+
+	&__svg {
+		height: 100%;
+		width: auto;
+	}
 
 	&__ripple {
 		width: 1px;
@@ -23,18 +19,6 @@
 		transform: translate(-50%, -50%);
 		border-radius: 50%;
 		animation: ripple-effect 0.8s cubic-bezier(ease-in-out-quad);
-	}
-
-	&--primary {
-		background: $primary;
-	}
-
-	&--secondary {
-		background: $tertiary;
-	}
-
-	&--tertiary {
-		background: $secondary;
 	}
 }
 

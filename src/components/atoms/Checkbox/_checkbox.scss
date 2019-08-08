@@ -100,21 +100,11 @@
 	}
 
 	// COLOURS - Creates standard, outline and text buttons
-	&--primary {
-		@include create-checkbox($primary);
-	}
-	&--secondary {
-		@include create-checkbox($secondary);
-	}
-	&--tertiary {
-		@include create-checkbox($tertiary);
-	}
-	&--green {
-		@include create-checkbox($green);
-	}
-	&--red {
-		@include create-checkbox($red);
-	}
+	@include checkbox-color('primary', $primary);
+	@include checkbox-color('secondary', $secondary);
+	@include checkbox-color('tertiary', $tertiary);
+	@include checkbox-color('green', $green);
+	@include checkbox-color('red', $red);
 }
 
 @keyframes ripple-effect {

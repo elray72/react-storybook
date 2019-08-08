@@ -1,11 +1,12 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import './_button.scss';
+import { Color } from '../../../common/types';
 
 interface IProps {
 	children?: React.ReactNode,
 	className?: string;
-	color?: string;
+	color?: Color;
 	onClick?: Function;
 	size?: string;
 	type?: string;

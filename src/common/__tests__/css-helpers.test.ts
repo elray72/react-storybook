@@ -1,6 +1,6 @@
-import { em } from '../helpers';
+import { em, rem } from '../css-helpers';
 
-describe('Common: Helpers', () => {
+describe('Common: Css Helpers', () => {
 
 	it('test em(16)', () => {
 		expect(em(16)).toBe('1em');
@@ -24,6 +24,18 @@ describe('Common: Helpers', () => {
 
 	it('test em(0, 0)', () => {
 		expect(em(0, 0)).toBe(0);
+	});
+
+	it('test em(16)', () => {
+		expect(em(16)).toBe('1rem');
+	});
+
+	it('test rem(24)', () => {
+		expect(rem(24)).toBe('1.5rem');
+	});
+
+	it('test rem(0)', () => {
+		expect(rem(0)).toBe(0);
 	});
 
 });

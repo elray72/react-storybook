@@ -1,11 +1,12 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import './_badge.scss';
+import { Color } from '../../../common/types';
 
 interface IProps {
 	children: React.ReactNode;
 	className?: string;
-	color?: string;
+	color?: Color;
 	max?: number;
 	value?: string | number;
 }

@@ -1,32 +1,34 @@
 @import '../../../themes/light/common';
 
-@mixin create-checkbox($color) {
-	.checkbox {
-		&__box {
-			border: rem(3) solid $color;
-		}
+@mixin checkbox-color($prefix, $color) {
+	&--#{$prefix} {
+		.checkbox {
+			&__box {
+				border: rem(3) solid $color;
+			}
 
-		&__check {
-			path {
-				fill: $color;
+			&__check {
+				path {
+					fill: $color;
+				}
 			}
 		}
-	}
 
-	.checkbox__box:before {
-		display: block;
-		content: '';
-		height: 100%;
-		width: 100%;
-		@include position-absolute(0, 0);
-		background-color: $color;
-		opacity: 0;
-		transition: 0.25s ease-in-out;
-	}
-
-	&:hover {
 		.checkbox__box:before {
-			opacity: 0.1;
+			display: block;
+			content: '';
+			height: 100%;
+			width: 100%;
+			@include position-absolute(0, 0);
+			background-color: $color;
+			opacity: 0;
+			transition: 0.25s ease-in-out;
+		}
+
+		&:hover {
+			.checkbox__box:before {
+				opacity: 0.1;
+			}
 		}
 	}
 }

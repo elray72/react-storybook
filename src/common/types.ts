@@ -1,0 +1,18 @@
+export type Color =
+	| 'primary'
+	| 'secondary'
+	| 'tertiary'
+	| 'black'
+	| 'off-black'
+	| 'white'
+	| 'off-white'
+	| 'grey'
+	| 'grey-pale'
+	| 'grey-light'
+	| 'grey-dark'
+	| 'blue'
+	| 'green'
+	| 'orange'
+	| 'purple'
+	| 'red'
+	| 'yellow';

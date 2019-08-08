@@ -41,20 +41,13 @@
 		padding: em(16) em(20);
 	}
 
-	// COLOURS
-	&--primary {
-		@include create-button($primary, $white);
-	}
-	&--secondary {
-		@include create-button($secondary, $white);
-	}
-	&--tertiary {
-		@include create-button($tertiary, $white, 12%);
-	}
-
-	&--primary-outline {
-
-	}
+	// COLOURS - 'primary' renders:
+	// .button--primary,
+	// .button--primary-outline,
+	// .button--primary-text
+	@include button-color('primary', $primary, $white);
+	@include button-color('secondary', $secondary, $white);
+	@include button-color('tertiary', $tertiary, $white, 12%);
 }
 
 @keyframes ripple-effect {
