@@ -4,7 +4,7 @@ import svg from '../svg/circle.svg';
 import svgO from '../svg/circle-o.svg';
 
 export const Circle: React.FC<IIcon> = (props) => {
-	const _svg = props.variant === 'O' ? svgO : svg;
+	const _svg = props.variant === 'o' ? svgO : svg;
 	return <Icon src={_svg} {...props} />;
 };
 

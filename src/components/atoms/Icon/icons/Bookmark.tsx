@@ -4,7 +4,7 @@ import svg from '../svg/bookmark.svg';
 import svgO from '../svg/bookmark-o.svg';
 
 export const Bookmark: React.FC<IIcon> = (props) => {
-	const _svg = props.variant === 'O' ? svgO : svg;
+	const _svg = props.variant === 'o' ? svgO : svg;
 	return <Icon src={_svg} {...props} />;
 };
 

@@ -17,7 +17,7 @@ export interface IIcon {
 	className?: string;
 	color?: string;
 	size?: number;
-	variant?: undefined | 'O';
+	variant?: undefined | 'o';
 }
 
 const Span = styled.span<IProps>`
