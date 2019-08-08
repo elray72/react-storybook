@@ -1,12 +1,16 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/bell.svg';
-import svgO from '../svg/bell-o.svg';
+import svg from '../svg/stop-circle.svg';
+import svgO from '../svg/stop-circle-o.svg';
 
-export const Bell: React.FC<IIcon> = (props) => {
+export interface IStopCircle extends IIcon {
+	variant?: undefined | 'o';
+}
+
+export const StopCircle: React.FC<IStopCircle> = (props) => {
 	const _svg = props.variant === 'o' ? svgO : svg;
 	return <Icon src={_svg} {...props} />;
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Bell;
+export default StopCircle;

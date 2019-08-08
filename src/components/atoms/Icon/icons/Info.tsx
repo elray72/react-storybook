@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/bell.svg';
-import svgO from '../svg/bell-o.svg';
+import svg from '../svg/info.svg';
 
-export const Bell: React.FC<IIcon> = (props) => {
-	const _svg = props.variant === 'o' ? svgO : svg;
-	return <Icon src={_svg} {...props} />;
+export const Info: React.FC<IIcon> = (props) => {
+	return (
+		<Icon src={svg} {...props} />
+	);
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Bell;
+export default Info;

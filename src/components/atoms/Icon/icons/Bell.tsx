@@ -3,7 +3,11 @@ import Icon, { IIcon } from '../Icon';
 import svg from '../svg/bell.svg';
 import svgO from '../svg/bell-o.svg';
 
-export const Bell: React.FC<IIcon> = (props) => {
+export interface IBell extends IIcon {
+	variant?: undefined | 'o';
+}
+
+export const Bell: React.FC<IBell> = (props) => {
 	const _svg = props.variant === 'o' ? svgO : svg;
 	return <Icon src={_svg} {...props} />;
 };

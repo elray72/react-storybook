@@ -1,12 +1,16 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/adjust.svg';
+import svg from '../svg/thumbs-up.svg';
+import svgO from '../svg/thumbs-up-o.svg';
 
-export const Adjust: React.FC<IIcon> = (props) => {
-	return (
-		<Icon src={svg} {...props} />
-	);
+export interface IThumbsUp extends IIcon {
+	variant?: undefined | 'o';
+}
+
+export const ThumbsUp: React.FC<IThumbsUp> = (props) => {
+	const _svg = props.variant === 'o' ? svgO : svg;
+	return <Icon src={_svg} {...props} />;
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Adjust;
+export default ThumbsUp;
