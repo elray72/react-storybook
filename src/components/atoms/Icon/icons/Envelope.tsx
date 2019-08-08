@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/adjust.svg';
+import svg from '../svg/envelope.svg';
+import svgO from '../svg/envelope-o.svg';
 
-export const Adjust: React.FC<IIcon> = (props) => {
-	return (
-		<Icon src={svg} {...props} />
-	);
+export const Envelope: React.FC<IIcon> = (props) => {
+	const _svg = props.variant === 'O' ? svgO : svg;
+	return <Icon src={_svg} {...props} />;
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Adjust;
+export default Envelope;

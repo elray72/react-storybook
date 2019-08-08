@@ -8,6 +8,7 @@ import Story, {
 	StoryItem,
 	StoryLayout,
 } from '../../templates/Story';
+import Bell from "./icons/Bell";
 
 const StoryComponent = () => (
 	<Story>
