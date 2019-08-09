@@ -4,7 +4,7 @@ import svg from '../svg/star.svg';
 import svgO from '../svg/star-o.svg';
 import svgHalfO from '../svg/star-half-o.svg';
 
-export interface IStar extends IIcon {
+interface IStar extends IIcon {
 	variant?: undefined | 'o' | 'half-o';
 }
 

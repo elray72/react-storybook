@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/tag.svg';
+import svg from '../svg/github-alt.svg';
 
-export const Tag: React.FC<IIcon> = (props) => {
+export const GitHub: React.FC<IIcon> = (props) => {
 	return (
 		<Icon src={svg} {...props} />
 	);
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Tag;
+export default GitHub;

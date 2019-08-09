@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
 import svg from '../svg/thumbs-up.svg';
-import svgO from '../svg/thumbs-up-o.svg';
+import svgO from '../svg/thumbs-o-up.svg';
 
-export interface IThumbsUp extends IIcon {
+interface IThumbsUp extends IIcon {
 	variant?: undefined | 'o';
 }
 

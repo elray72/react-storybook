@@ -3,7 +3,7 @@ import Icon, { IIcon } from '../Icon';
 import svg from '../svg/circle.svg';
 import svgO from '../svg/circle-o.svg';
 
-export interface ICircle extends IIcon {
+interface ICircle extends IIcon {
 	variant?: undefined | 'o';
 }
 

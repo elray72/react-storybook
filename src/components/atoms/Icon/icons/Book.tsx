@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/camera.svg';
+import svg from '../svg/book.svg';
 
-export const Camera: React.FC<IIcon> = (props) => {
+export const Book: React.FC<IIcon> = (props) => {
 	return <Icon src={svg} {...props} />;
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Camera;
+export default Book;

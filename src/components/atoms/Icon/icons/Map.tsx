@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/map.svg';
+import svg from '../svg/map-o.svg';
 
 export const Map: React.FC<IIcon> = (props) => {
 	return (

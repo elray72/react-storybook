@@ -3,7 +3,11 @@ import Icon, { IIcon } from '../Icon';
 import svg from '../svg/bookmark.svg';
 import svgO from '../svg/bookmark-o.svg';
 
-export const Bookmark: React.FC<IIcon> = (props) => {
+interface IBookmark extends IIcon {
+	variant?: undefined | 'o';
+}
+
+export const Bookmark: React.FC<IBookmark> = (props) => {
 	const _svg = props.variant === 'o' ? svgO : svg;
 	return <Icon src={_svg} {...props} />;
 };

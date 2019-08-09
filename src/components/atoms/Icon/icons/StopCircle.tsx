@@ -3,7 +3,7 @@ import Icon, { IIcon } from '../Icon';
 import svg from '../svg/stop-circle.svg';
 import svgO from '../svg/stop-circle-o.svg';
 
-export interface IStopCircle extends IIcon {
+interface IStopCircle extends IIcon {
 	variant?: undefined | 'o';
 }
 

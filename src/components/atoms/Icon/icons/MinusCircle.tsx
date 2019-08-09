@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Icon, { IIcon } from '../Icon';
-import svg from '../svg/lightbulb.svg';
+import svg from '../svg/minus-circle.svg';
 
-export const LightBulb: React.FC<IIcon> = (props) => {
+export const MinusCircle: React.FC<IIcon> = (props) => {
 	return (
 		<Icon src={svg} {...props} />
 	);
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default LightBulb;
+export default MinusCircle;

@@ -6,11 +6,11 @@ import svgDesc from '../svg/sort-amount-desc.svg';
 import svgAmountAsc from '../svg/sort-asc.svg';
 import svgAmountDesc from '../svg/sort-desc.svg';
 
-export interface IStar extends IIcon {
+interface ISort extends IIcon {
 	variant?: undefined | 'asc' | 'desc' | 'amount-asc' | 'amount-desc';
 }
 
-export const Star: React.FC<IStar> = (props) => {
+export const Sort: React.FC<ISort> = (props) => {
 	let _svg = svg;
 	switch (props.variant) {
 		case 'asc':
@@ -34,4 +34,4 @@ export const Star: React.FC<IStar> = (props) => {
 };
 
 // noinspection JSUnusedGlobalSymbols
-export default Star;
+export default Sort;
