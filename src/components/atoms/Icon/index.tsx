@@ -51,6 +51,7 @@ export * from './icons/FastBackward';
 export * from './icons/FastForward';
 export * from './icons/FileExcel';
 export * from './icons/File';
+export * from './icons/Files';
 export * from './icons/FilePdf';
 export * from './icons/FilePhoto';
 export * from './icons/FilePicture';
