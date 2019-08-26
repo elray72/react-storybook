@@ -2,7 +2,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import { Link,  Route, Switch } from 'react-router-dom';
 import 'sanitize.css';
-import '../themes/light/scss/style.scss';
+import '../themes/light/style.scss';
 
 import Header from './organisms/Header';
 import Nav from './organisms/Nav';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
 				<meta name="description" content="React SPA example. Built on Typescript and Redux." />
 			</Helmet>
 			<Header>
-				<Logo src="/assets/img/r-logo.svg" title="R logo" />
+				{/*<Logo src="/assets/img/r-logo.svg" title="R logo" />*/}
 				<Nav>
 					<Link to="/" className="nav__link" title="Home">
 						Home
