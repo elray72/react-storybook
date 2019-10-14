@@ -12,21 +12,25 @@ interface IProps {
 }
 
 /* todo: button, icon, wrap an item */
-
-const BadgeContainer: React.FC<IProps> = (props) => {
-	const componentColor = props.color ? `badge--${props.color}` : null;
-	const componentClass = classNames(props.className, 'badge', componentColor, {
-		'badge--text': typeof props.value === 'string',
-	});
-
-	let { value, max } = props;
+const BadgeContainer: React.FC<IProps> = ({
+	children,
+	className,
+	color,
+	max,
+	value,
+}) => {
 	if (typeof value === 'number' && typeof max !== 'undefined') {
 		value = value <= max ? value : `${max}+`;
 	}
 
+	const componentColor = color ? `badge--${color}` : null;
+	const componentClass = classNames(className, 'badge', componentColor, {
+		'badge--text': typeof value === 'string',
+	});
+
 	return (
 		<span className="badge-container">
-			{props.children}
+			{children}
 			<span className={componentClass}>{value}</span>
 		</span>
 	);
