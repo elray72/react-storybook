@@ -34,7 +34,7 @@
     "@storybook/react": "^5.1.9",
     "@storybook/theming": "^5.1.9",
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prettier": "^1.18.2"
   },
   "dependencies": {
